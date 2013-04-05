@@ -6,8 +6,8 @@
       .span12
         / Logo or Name section
         .logo
-          %p.lmain Harrison Ford
-          %p.lsub professional web designer and developer
+          = link_to image_tag("logo.png"), root_path
+          %p.lsub RubyMotion Profressionals Meetup
     .row
       .span12
         .flexslider
@@ -15,38 +15,32 @@
             / Slide #1
             / Each slide should be enclosed inside <li> tag.
             %li
-              = image_tag "photos/s3.jpg"
+              = image_tag "photos/motion.png"
             / Slide #2
-            %li
-              = image_tag "photos/s2.jpg"
+            /%li
+            /  = image_tag "photos/s2.jpg"
             / Slide #3
-            %li
-              = image_tag "photos/s1.jpg"
+            /%li
+            /  = image_tag "photos/s1.jpg"
             / Slide #4
-            %li
-              = image_tag "photos/s4.jpg"
+            /%li
+            /  = image_tag "photos/s4.jpg"
             / Slide #5
-            %li
-              = image_tag "photos/s5.jpg"
+            /%li
+            /  = image_tag "photos/s5.jpg"
             / Slide #6
-            %li
-              = image_tag "photos/s6.jpg"
+            /%li
+            /  = image_tag "photos/s6.jpg"
             / Slide #7
-            %li
-              = image_tag "photos/s7.jpg"
+            /%li
+            /  = image_tag "photos/s7.jpg"
     .row
       .span10.offset1
-        / Important liks like vcard download, phone number and contact details
-        .cta
-          %a{:href => "#"}
-            %i.icon-download
-            Downloady My vCard
-          %a{:href => "#"}
-            %i.icon-phone
-            123-456-7890
-          %a{:href => "#"}
-            %i.icon-envelope
-            Contact Me Now
+        %h3 Hi,
+        %p
+          If you're a dev interested in keeping up to date with the ecosystem of RubyMotion, you found the right group.
+          MotionMeetup is full of RubyMotion developers of all levels who want to keep up to date with the latest in RubYmotion
+          technology, or just don't want to suck. 
 / navigation
 .navigation
   .container
@@ -58,33 +52,33 @@
           .box
             .box-r.box-d
               %a#content-r.anchorLink{:href => "#location"}
-              %p.top About Me
+              %p.top Sign Up
               %p.bor
-              %p.bot Something about me
+              %p.bot Join the Mailing List
             .clearfix
           / Navigation #2
           .box
             .box-g.box-d
               %a#content-g.anchorLink{:href => "#location"}
-              %p.top Resume
+              %p.top Schedule
               %p.bor
-              %p.bot Skills and Experience
+              %p.bot The When, Where, and How
             .clearfix
           / Navigation #3
           .box
             .box-b.box-d
               %a#content-b.anchorLink{:href => "#location"}
-              %p.top Portfolio
+              %p.top Archive
               %p.bor
-              %p.bot What i did in past
+              %p.bot Past Meetups
             .clearfix
           / Navigation #4
           .box
             .box-y.box-d
               %a#content-y.anchorLink{:href => "#location"}
-              %p.top Contact Me
+              %p.top About
               %p.bor
-              %p.bot How to contact me
+              %p.bot Wut?
             .clearfix
 / Content
 .content
@@ -256,8 +250,8 @@
       .span4
         / Copyright info
         %p
-          Copyright &copy; 2012 -
-          %a{:href => "#"} Harrison Ford
+          Copyright &copy; 2013 -
+          %a{:href => "http://www.IconoclastLabs.com"} Iconoclast Labs LLC
       .span3.offset5
         / Social media icons
         .social
