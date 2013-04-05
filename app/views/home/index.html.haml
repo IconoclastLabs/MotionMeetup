@@ -39,7 +39,7 @@
         %h3 Hi,
         %p
           If you're a dev interested in keeping up to date with the ecosystem of RubyMotion, you found the right group.
-          MotionMeetup is full of RubyMotion developers of all levels who want to keep up to date with the latest in RubYmotion
+          MotionMeetup is full of RubyMotion developers of all levels who want to keep up to date with the latest in RubyMotion
           technology, or just don't want to suck. 
 / navigation
 .navigation
@@ -52,33 +52,33 @@
           .box
             .box-r.box-d
               %a#content-r.anchorLink{:href => "#location"}
-              %p.top Sign Up
-              %p.bor
-              %p.bot Join the Mailing List
+                %p.top Sign Up
+                %p.bor
+                %p.bot Join the Mailing List
             .clearfix
           / Navigation #2
           .box
             .box-g.box-d
               %a#content-g.anchorLink{:href => "#location"}
-              %p.top Schedule
-              %p.bor
-              %p.bot The When, Where, and How
+                %p.top Schedule
+                %p.bor
+                %p.bot The When, Where, and How
             .clearfix
           / Navigation #3
           .box
             .box-b.box-d
               %a#content-b.anchorLink{:href => "#location"}
-              %p.top Archive
-              %p.bor
-              %p.bot Past Meetups
+                %p.top Archive
+                %p.bor
+                %p.bot Past Meetups
             .clearfix
           / Navigation #4
           .box
             .box-y.box-d
               %a#content-y.anchorLink{:href => "#location"}
-              %p.top About
-              %p.bor
-              %p.bot Wut?
+                %p.top About
+                %p.bor
+                %p.bot Wut?
             .clearfix
 / Content
 .content
@@ -89,152 +89,14 @@
         %a#location{:name => "location"}
       .span12
         / Each section should be enclosed inside the classes "content-X content-d". Where X denotes the background color.
-        / Below section is About me section with red background.
-        .content-r.content-d
-          / Title
-          %h2 About Me
-          / Border
-          .border
-          / Your pic with class "profile"
-          %img.profile{:alt => "", :src => "img/pic.jpg"}/
-          / Social media icons
-          .social-icons
-            %a.tip{"data-original-title" => "Facebook", :href => "#"}
-              %i.icon-facebook
-            %a.tip{"data-original-title" => "Twitter", :href => "#"}
-              %i.icon-twitter
-            %a.tip{"data-original-title" => "Linkedin", :href => "#"}
-              %i.icon-linkedin
-            %a.tip{"data-original-title" => "Google Plus", :href => "#"}
-              %i.icon-google-plus
-          / Para
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at mauris metus. Duis interdum magna sit amet orci euismod id elementum metus posuere. Nam at augue quam, sit amet tristique tellus. Nunc enim eros, imperdiet ultrices rhoncus non, scelerisque vel justo. Quisque convallis aliquam tincidunt. Aenean nec lectus blandit lectus pellentesque posuere eget id nisl. Praesent at neque libero. Phasellus feugiat
-            = succeed "," do
-              %a{:href => "#"} elementum arcu
-            non faucibus elit sodales nec. Quisque convallis aliquam tincidunt. Aenean nec lectus blandit lectus pellentesque posuere eget id nisl. Mauris consectetur varius dui nec sollicitudin. Donec a enim justo. Proin nec convallis tellus. Praesent at neque libero. Phasellus feugiat elementum arcu, non faucibus elit sodales nec.
-          .clearfix
-        / Resume section with green background.
-        .content-g.content-d
-          / Title
-          %h2 Resume
-          / Border
-          .border
-          / Content
-          .resume
-            .row
-              .span3
-                / Title
-                %h3 Education
-              .span8
-                / Information
-                .rcontent
-                  %h4 K.L.N. College of Engineering, Madurai
-                  %p.tag B.Tech (Information Technology) - 2003-2017 - 89%
-                  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate eros nec odio egestas in dictum nisi vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse porttitor luctus imperdiet.
-            .border
-            .row
-              .span3
-                %h3 Skills
-              .span8
-                .rcontent
-                  %h4 Web Designer/Developer
-                  %p.tag Stuffs I Know
-                  .skills
-                    / Each skill should be enclosed inside "span" tag with class "skill".
-                    %span.skill HTML5
-                    %span.skill CSS3
-                    %span.skill JavaScript
-                    %span.skill jQuery
-                    %span.skill BootStrap
-                    %span.skill WordPress
-                    %span.skill Photoshop
-                    %span.skill PHP/MySQL
-                    %span.skill CodeIgniter
-            .border
-            .row
-              .span3
-                %h3 Work Experience
-              .span8
-                .rcontent
-                  %h4 Google Inc, London
-                  %p.tag Project Manager - 2009-2011
-                  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate eros nec odio egestas in dictum nisi vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse porttitor luctus imperdiet.
-        / Portfolio section with blue background
-        .content-b.content-d
-          %h2 Portfolio
-          .border
-          / I am using prettyPhoto plugin. Full size image should be given side <a> tag and thumbnail size image should be given inside <img> tag. Don't forget the class "prettyPhoto[pp_gal]" in <a> tag.
-          .portfolio
-            %a{:class => "prettyPhoto[pp_gal]", :href => "img/photos/1.jpg"}
-              %img{:alt => "", :src => "img/photos/tn_1.jpg"}/
-            %a{:class => "prettyPhoto[pp_gal]", :href => "img/photos/2.jpg"}
-              %img{:alt => "", :src => "img/photos/tn_2.jpg"}/
-            %a{:class => "prettyPhoto[pp_gal]", :href => "img/photos/3.jpg"}
-              %img{:alt => "", :src => "img/photos/tn_3.jpg"}/
-            %a{:class => "prettyPhoto[pp_gal]", :href => "img/photos/4.jpg"}
-              %img{:alt => "", :src => "img/photos/tn_4.jpg"}/
-            %a{:class => "prettyPhoto[pp_gal]", :href => "img/photos/5.jpg"}
-              %img{:alt => "", :src => "img/photos/tn_5.jpg"}/
-            %a{:class => "prettyPhoto[pp_gal]", :href => "img/photos/6.jpg"}
-              %img{:alt => "", :src => "img/photos/tn_6.jpg"}/
-            %a{:class => "prettyPhoto[pp_gal]", :href => "img/photos/7.jpg"}
-              %img{:alt => "", :src => "img/photos/tn_7.jpg"}/
-            %a{:class => "prettyPhoto[pp_gal]", :href => "img/photos/8.jpg"}
-              %img{:alt => "", :src => "img/photos/tn_8.jpg"}/
-        / Contact section with yellow background
-        .content-y.content-d
-          %h2 Contact Me
-          .border
-          .contact
-            .row
-              .span6
-                / Contact form
-                .form
-                  %form.form-horizontal
-                    .control-group
-                      %label.control-label{:for => "name"} Name
-                      .controls
-                        %input#name.input-medium{:type => "text"}/
-                    .control-group
-                      %label.control-label{:for => "email"} Email
-                      .controls
-                        %input#email.input-medium{:type => "text"}/
-                    .control-group
-                      %label.control-label{:for => "website"} Website
-                      .controls
-                        %input#website.input-medium{:type => "text"}/
-                    .control-group
-                      %label.control-label{:for => "comment"} Comment
-                      .controls
-                        %textarea#comment.input-madium{:rows => "3"}
-                    .form-actions
-                      %button.btn{:type => "submit"} Submit
-                      %button.btn{:type => "reset"} Reset
-              .span5
-                / Google maps
-                .gmap
-                  %iframe{:frameborder => "0", :height => "175", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Hampton+Court+Palace,+East+Molesey,+United+Kingdom&amp;aq=2&amp;oq=London&amp;sll=9.930582,78.12303&amp;sspn=0.192085,0.308647&amp;ie=UTF8&amp;hq=Hampton+Court+Palace,+East+Molesey,+United+Kingdom&amp;ll=51.404615,-0.341578&amp;spn=0.013921,0.032015&amp;t=m&amp;output=embed"}
-                .border
-                / Address
-                .address
-                  .row
-                    .span3
-                      %address
-                        %span.color.bold.company Your Company, Inc.
-                        %br/
-                        795 Folsom Ave, Suite 600
-                        %br/
-                        San Francisco, CA 94107
-                        %br/
-                    .span2
-                      %address
-                        %span.color.bold.company Your Name
-                        %br/
-                        %a{:href => "mailto:#"} first.last@gmail.com
-                        %br/
-                        %abbr{:title => "Phone"} P:
-                        (123) 456-7890
+        / Signup section with red background.
+        = render "home/signup"
+        / Schedule section with green background.
+        = render "home/schedule"
+        / Archive section with blue background
+        = render "home/archive"
+        / About section with yellow background
+        = render "home/about"
 .top-animation
   .container
     .row

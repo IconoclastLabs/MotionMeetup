@@ -1,0 +1,52 @@
+.content-y.content-d
+  %h2 Contact Me
+  .border
+  .contact
+    .row
+      .span6
+        / Contact form
+        .form
+          %form.form-horizontal
+            .control-group
+              %label.control-label{:for => "name"} Name
+              .controls
+                %input#name.input-medium{:type => "text"}/
+            .control-group
+              %label.control-label{:for => "email"} Email
+              .controls
+                %input#email.input-medium{:type => "text"}/
+            .control-group
+              %label.control-label{:for => "website"} Website
+              .controls
+                %input#website.input-medium{:type => "text"}/
+            .control-group
+              %label.control-label{:for => "comment"} Comment
+              .controls
+                %textarea#comment.input-madium{:rows => "3"}
+            .form-actions
+              %button.btn{:type => "submit"} Submit
+              %button.btn{:type => "reset"} Reset
+      .span5
+        / Google maps
+        .gmap
+          %iframe{:frameborder => "0", :height => "175", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Hampton+Court+Palace,+East+Molesey,+United+Kingdom&amp;aq=2&amp;oq=London&amp;sll=9.930582,78.12303&amp;sspn=0.192085,0.308647&amp;ie=UTF8&amp;hq=Hampton+Court+Palace,+East+Molesey,+United+Kingdom&amp;ll=51.404615,-0.341578&amp;spn=0.013921,0.032015&amp;t=m&amp;output=embed"}
+        .border
+        / Address
+        .address
+          .row
+            .span3
+              %address
+                %span.color.bold.company Your Company, Inc.
+                %br/
+                795 Folsom Ave, Suite 600
+                %br/
+                San Francisco, CA 94107
+                %br/
+            .span2
+              %address
+                %span.color.bold.company Your Name
+                %br/
+                %a{:href => "mailto:#"} first.last@gmail.com
+                %br/
+                %abbr{:title => "Phone"} P:
+                (123) 456-7890
