@@ -112,7 +112,9 @@
       .span4
         / Copyright info
         %p
-          Copyright &copy; 2013 -
+          Copyright &copy; 
+          = Time.now.year 
+          -
           %a{:href => "http://www.IconoclastLabs.com"} Iconoclast Labs LLC
       .span3.offset5
         / Social media icons
