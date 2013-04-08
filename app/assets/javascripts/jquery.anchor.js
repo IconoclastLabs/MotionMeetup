@@ -12,10 +12,6 @@
 		
 
 
-$(document).ready(function() {
-	$("a.anchorLink").anchorAnimate()
-});
-
 jQuery.fn.anchorAnimate = function(settings) {
 
  	settings = jQuery.extend({
@@ -37,3 +33,8 @@ jQuery.fn.anchorAnimate = function(settings) {
 		})
 	})
 }
+
+$(document).ready(function() {
+	$("a.anchorLink").anchorAnimate()
+});
+

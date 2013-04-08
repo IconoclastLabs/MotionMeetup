@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require 'jquery.anchor'
+//= require 'jquery.flexslider-min'
+//= require 'jquery.prettyPhoto'
+//= require 'easing'
 //= require bootstrap
-//= require_tree .
+//= require 'home'

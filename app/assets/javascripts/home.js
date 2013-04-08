@@ -11,8 +11,6 @@ $(window).load(function() {
 });
 
 // Box animation 
-
-
 $(document).ready(function() {
     $('.content-d').hide();
     $('.box-d a').click(function() {
@@ -25,12 +23,9 @@ $(document).ready(function() {
 }); 
 
 /* Tooltip */
-
 $('.tip').tooltip();
 
-
 /* prettyPhoto */
-
 jQuery("a[class^='prettyPhoto']").prettyPhoto({
-overlay_gallery: false, social_tools: false
+  overlay_gallery: false, social_tools: false
 });
