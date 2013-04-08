@@ -1,0 +1,24 @@
+/ Footer
+%footer
+  .container
+    .row
+      .span4
+        / Copyright info
+        %p
+          Copyright &copy; 
+          = Time.now.year 
+          _
+          %a{:href => "http://www.IconoclastLabs.com"} Iconoclast Labs LLC
+          _ 
+          %a{href: "https://github.com/IconoclastLabs/MotionMeetup"} Site Source
+      .span3.offset5
+        / Social media icons
+        .social
+          %a.facebook{:href => "#"}
+            %i.icon-facebook
+          %a.twitter{:href => "#"}
+            %i.icon-twitter
+          %a.linkedin{:href => "#"}
+            %i.icon-linkedin
+          %a.google-plus{:href => "#"}
+            %i.icon-google-plus

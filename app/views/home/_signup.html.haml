@@ -24,29 +24,25 @@
               .controls
                 %textarea#comment.input-madium{:rows => "3"}
             .form-actions
-              %button.btn{:type => "submit"} Submit
-              %button.btn{:type => "reset"} Reset
+              %button.btn{:type => "submit"} Subscribe
+              %button.btn{:type => "reset"} Reset (yeah really)
       .span5
-        / Google maps
-        .gmap
-          %iframe{:frameborder => "0", :height => "175", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Hampton+Court+Palace,+East+Molesey,+United+Kingdom&amp;aq=2&amp;oq=London&amp;sll=9.930582,78.12303&amp;sspn=0.192085,0.308647&amp;ie=UTF8&amp;hq=Hampton+Court+Palace,+East+Molesey,+United+Kingdom&amp;ll=51.404615,-0.341578&amp;spn=0.013921,0.032015&amp;t=m&amp;output=embed"}
+        %h3 How it Works
+        / normally where a map would go
+        %p
+          = image_tag "rubymotion_group.png", style: "float: right;"
+          Signing up will keep you updated with events on the Meetups.  Like who will be talking, dates, times, and archive updates.
+        %p
+          On the day of the meetup, chat will be handled via the RubyMotion IRC Channel, and video will be provided via Google hangout.
         .border
         / Address
         .address
           .row
             .span3
               %address
-                %span.color.bold.company Your Company, Inc.
-                %br/
-                795 Folsom Ave, Suite 600
-                %br/
-                San Francisco, CA 94107
-                %br/
+                %span.color.bold.company 
+                  24/7 IRC channel #rubymotion
             .span2
               %address
-                %span.color.bold.company Your Name
-                %br/
-                %a{:href => "mailto:#"} first.last@gmail.com
-                %br/
-                %abbr{:title => "Phone"} P:
-                (123) 456-7890
+                %span.color.bold.company
+                  %a{href: "http://webchat.freenode.net/"} freenode.net

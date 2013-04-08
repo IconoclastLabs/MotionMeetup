@@ -7,7 +7,7 @@
         / Logo or Name section
         .logo
           = link_to image_tag("logo.png"), root_path
-          %p.lsub RubyMotion Profressionals Meetup
+          %p.lsub Monthly Online RubyMotion Meetup
     .row
       .span12
         .flexslider
@@ -54,7 +54,7 @@
               %a#content-y.anchorLink{:href => "#location"}
                 %p.top Sign Up
                 %p.bor
-                %p.bot Join the Mailing List
+                %p.bot Get Notified and How
             .clearfix
           / Navigation #2
           .box
@@ -62,7 +62,7 @@
               %a#content-g.anchorLink{:href => "#location"}
                 %p.top Schedule
                 %p.bor
-                %p.bot The When, Where, and How
+                %p.bot The When and Who
             .clearfix
           / Navigation #3
           .box
@@ -105,27 +105,4 @@
         .top-goo
           %a.top-go.anchorLink{:href => "#homey"}
             %i.icon-circle-arrow-up
-/ Footer
-%footer
-  .container
-    .row
-      .span4
-        / Copyright info
-        %p
-          Copyright &copy; 
-          = Time.now.year 
-          _
-          %a{:href => "http://www.IconoclastLabs.com"} Iconoclast Labs LLC
-          _ 
-          %a{href: "https://github.com/IconoclastLabs/MotionMeetup"} Site Source
-      .span3.offset5
-        / Social media icons
-        .social
-          %a.facebook{:href => "#"}
-            %i.icon-facebook
-          %a.twitter{:href => "#"}
-            %i.icon-twitter
-          %a.linkedin{:href => "#"}
-            %i.icon-linkedin
-          %a.google-plus{:href => "#"}
-            %i.icon-google-plus
+= render "home/footer"
