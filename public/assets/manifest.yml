@@ -153,6 +153,10 @@ application.js: application-a7ff4e00674dd00cc4d3fc7e3ab7beb3.js
 application/index.js: application-a7ff4e00674dd00cc4d3fc7e3ab7beb3.js
 application.css: application-c3289c5ffc118604b8b0a313c05cba6b.css
 application/index.css: application-c3289c5ffc118604b8b0a313c05cba6b.css
+html5shim.js: html5shim-dc2252f5c49bbf9b648729fe4c28d477.js
+html5shim/index.js: html5shim-dc2252f5c49bbf9b648729fe4c28d477.js
+font-awesome-ie7.css: font-awesome-ie7-4fa4dae05a3f9ad9625536dea8e0ff93.css
+font-awesome-ie7/index.css: font-awesome-ie7-4fa4dae05a3f9ad9625536dea8e0ff93.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings.png: glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png
