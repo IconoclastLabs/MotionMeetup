@@ -1,6 +1,17 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.12'
-gem 'sqlite3'
+
+group :production do
+  #heroku only has PostgreSQL
+  gem "pg"
+  gem 'dalli' #managed access to memcache on heroku
+end
+
+group :test, :development do
+  gem 'awesome_print'
+  gem 'sqlite3'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
