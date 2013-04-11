@@ -5,27 +5,20 @@
     .row
       .span6
         / About form
+        %strong MotionMeetup Newsletter Signup:
+        %em 
+          Info you would care about.  
+        We're not interested in spamming you (unless we can use canned Spam).
         .form
-          %form.form-horizontal
+          = form_for @message, :url => root_path, :html => { :id => 'signupSubmit', :class => 'form-horizontal'} do |form|
             .control-group
-              %label.control-label{:for => "name"} Name
-              .controls
-                %input#name.input-medium{:type => "text"}/
+              =form.text_field :name, placeholder: "Your Name"
             .control-group
-              %label.control-label{:for => "email"} Email
-              .controls
-                %input#email.input-medium{:type => "text"}/
-            .control-group
-              %label.control-label{:for => "website"} Website
-              .controls
-                %input#website.input-medium{:type => "text"}/
-            .control-group
-              %label.control-label{:for => "comment"} Comment
-              .controls
-                %textarea#comment.input-madium{:rows => "3"}
+              =form.text_field :email, placeholder: "Your e-mail address"
+            .control-group  
+              =form.text_field :captcha, placeholder: "7 * 9 = ?"
             .form-actions
-              %button.btn{:type => "submit"} Subscribe
-              %button.btn{:type => "reset"} Reset (yeah really)
+              =form.submit "Sign Up", class: "btn"
       .span5
         %h3 How it Works
         / normally where a map would go
@@ -33,7 +26,7 @@
           = image_tag "rubymotion_group.png", style: "float: right;"
           Signing up will keep you updated with events on the Meetups.  Like who will be talking, dates, times, and archive updates.
         %p
-          On the day of the meetup, chat will be handled via the RubyMotion IRC Channel, and video will be provided via Google hangout.
+          On the day of the meetup, chat will be handled via the RubyMotion IRC Channel, and video will be provided via Google Hangout.
         .border
         / Address
         .address
