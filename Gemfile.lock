@@ -194,7 +194,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   better_errors (>= 0.7.2)
-  binding_of_caller (>= 0.7.1)
+  binding_of_caller
   bootstrap-sass (>= 2.3.0.0)
   coffee-rails (~> 3.2.1)
   dalli
