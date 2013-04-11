@@ -1,8 +1,12 @@
 Motion Meetup
 ========================
 
-### This is the Site Code ###
+### Site Purpose ###
+Group meetup for RubyMotion Developers
 
+If you're a dev interested in keeping up to date with the ecosystem of RubyMotion, you found the right group. MotionMeetup is full of RubyMotion developers of all levels who want to keep up to date with the latest in RubyMotion technology, or just don't want to suck.  
+
+### Site Code ###
 
 This application was generated with the rails_apps_composer gem:
 https://github.com/RailsApps/rails_apps_composer
@@ -19,4 +23,4 @@ Preferences:
 
 ________________________
 
-License
+
