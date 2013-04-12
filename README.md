@@ -8,6 +8,9 @@ If you're a dev interested in keeping up to date with the ecosystem of RubyMotio
 
 ### Site Code ###
 
+This site utalizes the figaro gem, and therefore some API credentials are hidden in `config/application.yml`
+There is an application.example.yml that shows the environment variables in use for the full application to function.
+
 This application was generated with the rails_apps_composer gem:
 https://github.com/RailsApps/rails_apps_composer
 provided by the RailsApps Project:
