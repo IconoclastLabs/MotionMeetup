@@ -13,7 +13,9 @@ private
 	    @message = Message.new(params[:message])
 	    
 	    if @message.valid?
-	      flash[:success] = "You're all set!"
+	    	mimi = MadMimi.new(ENV["MIMI_USERNAME"], ENV["MIMI_API"])
+      	mimi.add_to_list(@message.email,'MotionMeetup')
+      	flash[:notice] = "#{@message.email}, you have successfully signed up!"
 	    else
 	      flash[:error] = "Please fill all fields correctly."
 	    end
