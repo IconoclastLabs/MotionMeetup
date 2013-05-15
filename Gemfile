@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 group :production do
   #heroku only has PostgreSQL
+  gem 'thin'
   gem "pg"
   gem 'dalli' #managed access to memcache on heroku
 end
@@ -11,7 +12,34 @@ end
 group :test, :development do
   gem 'awesome_print'
   gem 'sqlite3'
-  gem 'binding_of_caller'
+  gem 'turn'
+  gem 'minitest-spec-rails'
+  gem 'puma'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'interactive_editor'
+  gem "quiet_assets", ">= 1.0.1"
+  gem 'guard'
+  gem 'guard-rails'
+  gem 'guard-minitest'
+  gem 'guard-annotate'
+  gem "guard-puma"
+  gem 'guard-bundler', "~> 1.0.0"
+  gem 'brakeman'
+  gem 'guard-brakeman'
+  #gem 'guard-test'
+  gem "sextant" # adds route display info to /rails/routes
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'annotate'
+  #gem "literate_randomizer"
+  # Filesystem notifiers
+  gem 'ruby_gntp' # Growl notification protocol
+  #gem 'libnotify'
+  gem 'rb-inotify', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-fchange', :require => false
 end
 
 group :assets do
@@ -21,17 +49,13 @@ group :assets do
 end
 gem 'jquery-rails'
 gem 'madmimi'
-gem "thin", ">= 1.5.0"
 gem "haml-rails", ">= 0.4"
 gem "html2haml", ">= 1.0.1", :group => :development
-gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
-gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
+#gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
 gem "email_spec", ">= 1.4.0", :group => :test
-gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "omniauth", ">= 1.1.3"
 gem "omniauth-github"
 gem "simple_form", ">= 2.1.0"
-gem "quiet_assets", ">= 1.0.2", :group => :development
 gem "figaro", ">= 0.6.3"
-gem "better_errors", ">= 0.7.2", :group => :development
+
