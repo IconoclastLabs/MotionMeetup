@@ -1,0 +1,551 @@
+
+Status #rubymotionX
+[Online meetup! http://www.youtube.com/watch?v=Pel-0XS-mJc&feature=youtu.be]
+[17:37] == GantMan [440b3aa6@gateway/web/freenode/ip.68.11.58.166] has joined #rubymotion
+[17:38] <GantMan> excited!
+[17:42] <lrz> \o/
+[17:43] <iwarshak> mattvv: which is that?
+[17:45] <mattvv> iwarshak: Showkit! http://www.showkit.com/docs#ios_rubymotion
+[17:46] * mattvv shamelessly pimps
+[17:46] == tootubular [~tootubula@74-93-149-214-Memphis.hfc.comcastbusiness.net] has quit [Quit: tootubular]
+[17:52] == mode/#rubymotion [+o lrz] by ChanServ
+[17:52] == Keltia_ [roberto@aran.keltia.net] has joined #rubymotion
+[17:53] == Keltia_ has changed nick to Keltia
+[17:53] == mode/#rubymotion [+o GantMan] by lrz
+[17:53] == mode/#rubymotion [+o colinta] by lrz
+[17:53] == mode/#rubymotion [-o lrz] by lrz
+[17:54] * mattvv dances
+[17:54] == watson1978 [~watson197@36-2-116-101.chiba.ap.gmo-isp.jp] has joined #rubymotion
+[17:54] == bensie [~bensie@108-251-68-252.lightspeed.sndgca.sbcglobal.net] has joined #rubymotion
+[17:55] == joffreyjaffeux [~joffreyja@230.88.206.77.rev.sfr.net] has joined #rubymotion
+[17:55] == lrz_ [~lrz@87.67.251.179] has joined #rubymotion
+[17:55] == lrz [~lrz@87.67.251.179] has quit [Read error: Connection reset by peer]
+[17:56] == danhealy [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has joined #rubymotion
+[17:56] == brianpWins [~brianpWin@96.53.33.22] has joined #rubymotion
+[17:56] == knoonan [~knoonan@37.228.221.145] has joined #rubymotion
+[17:57] == mattsgarrison [62a3f730@gateway/web/freenode/ip.98.163.247.48] has joined #rubymotion
+[17:58] == visoft [~dwhite@173-13-79-29-NewEngland.hfc.comcastbusiness.net] has joined #rubymotion
+[17:59] == joffreyjaffeux_ [4dce58e6@gateway/web/freenode/ip.77.206.88.230] has joined #rubymotion
+[17:59] == rod__ [~rod@c-71-195-194-216.hsd1.ut.comcast.net] has joined #rubymotion
+[17:59] == gmacc [~gmack@pool-100-1-126-177.nwrknj.fios.verizon.net] has joined #rubymotion
+[17:59] == joffreyjaffeux [~joffreyja@230.88.206.77.rev.sfr.net] has left #rubymotion []
+[17:59] <lrz_> it seems that we are having troubles setting up the hangout, google changed the whole thing after the conference
+[18:00] == Dan2552 [52199bc2@gateway/web/freenode/ip.82.25.155.194] has joined #rubymotion
+[18:00] == wndxlori [~textual@184.71.41.230] has joined #rubymotion
+[18:00] <@colinta> haha go figure
+[18:00] <@GantMan> one moment guys
+[18:00] <@GantMan> matt said "AHA!"
+[18:00] == BeautifulFunc [~Beautiful@66-216-224-10.dhcp.stcd.mn.charter.com] has joined #rubymotion
+[18:00] <@GantMan> then closed the video chat
+[18:01] <@GantMan> backup plan is using ustream.tv
+[18:01] == zef [~zef@c-98-245-121-170.hsd1.co.comcast.net] has joined #rubymotion
+[18:02] <jballanc> well, I'm seeing something: http://www.youtube.com/watch?v=Pel-0XS-mJc&feature=youtu.be
+[18:02] == baxang [0e340e2b@gateway/web/freenode/ip.14.52.14.43] has joined #rubymotion
+[18:02] == Austin_Seraphin [~Adium@173-12-5-73-Philadelphia.hfc.comcastbusiness.net] has joined #rubymotion
+[18:02] == AndyStechishin [~textual@108.173.63.123] has joined #rubymotion
+[18:02] == rodchile [~rodchile@190.215.36.70] has joined #rubymotion
+[18:02] <sail> me too,but no sounds
+[18:03] <sail> i heard something...
+[18:03] <marcisme> sounded like a brief keyboard tap
+[18:03] == jamonholmgren [~jh@70-90-129-137-oregon.hfc.comcastbusiness.net] has joined #rubymotion
+[18:03] == leftsaidtim [~user@173-228-55-220.static.sonic.net] has joined #rubymotion
+[18:03] <BeautifulFunc> I don't hear anything either.
+[18:03] <sail> sounded like somebody move something...
+[18:03] <doug316_> I've got nothing, are we just supposed to sit and wait on the event page?
+[18:03] <marcisme> I don't think anyone is actually talking yet, but there was a bit of noise.
+[18:04] <@colinta> hold tight, you're not missing anything :-)
+[18:04] <@GantMan> stay at that youtube link
+[18:04] <@colinta> just the sound of me typing
+[18:04] <@colinta> ...which always sounds like someone chewing on marbles to me…
+[18:04] <wndxlori> i just see a splash page of sorts, no sound, no video
+[18:05] <mattsgarrison> Trying to get Gant in the Hangout...
+[18:05] == leftsaidtim [~user@173-228-55-220.static.sonic.net] has left #rubymotion ["ERC Version 5.3 (IRC client for Emacs)"]
+[18:05] == esummers [~esummers@99-122-65-22.lightspeed.milwwi.sbcglobal.net] has joined #rubymotion
+[18:05] == Beto [~Beto@187-162-90-93.static.axtel.net] has joined #rubymotion
+[18:05] == ashish_ [7c9bf9ed@gateway/web/freenode/ip.124.155.249.237] has joined #rubymotion
+[18:05] <mattsgarrison> apologies for our rough start, just had to be the same day Google revised Hangouts
+[18:05] <wndxlori> lol
+[18:05] <jamonholmgren> Yeah nice timing guys…haha...
+[18:06] <ashish_> its good morning from india lol
+[18:06] <lrz_> we should have used apple technologies!
+[18:06] <brianpWins> I'm just going to go ahead and take the blame for this. It's clearly my bad,
+[18:06] == knoonan [~knoonan@37.228.221.145] has quit [Quit: knoonan]
+[18:06] <jamonholmgren> lol @lrz
+[18:06] == memph1s [~memph1s@93.85.132.208] has joined #rubymotion
+[18:06] <@colinta> good morning india!
+[18:07] <marcisme> a brief flash of bacon
+[18:07] <@GantMan> lol
+[18:07] <@GantMan> mmmm bacon
+[18:07] <ashish_> @colinta .. thank u ! :D
+[18:07] == bensheldon [~bensheldo@50.0.141.157] has joined #rubymotion
+[18:07] <wndxlori> i see video!
+[18:07] <lrz_> yes!
+[18:07] <Dan2552> yes!
+[18:07] <wndxlori> and hear audio!
+[18:07] <jballanc> I can hear you!
+[18:07] <Austin_Seraphin> Greetings from Indy Hall, here in Philadelphia! We will eat curry in a little while, but I'll stay on while able.
+[18:07] <ashish_> its starts ! :)
+[18:07] == neshmi [~neshmi@cpe-76-88-33-168.san.res.rr.com] has quit [Remote host closed the connection]
+[18:07] <BeautifulFunc> I hear you
+[18:08] <@colinta> hey Austin_Seraphin!
+[18:08] <@GantMan> sorry everyone!
+[18:08] == neshmi [~neshmi@cpe-76-88-33-168.san.res.rr.com] has joined #rubymotion
+[18:08] <@GantMan> we're working on it ASAP
+[18:08] == silasjmatson [~silasjmat@70-90-129-137-oregon.hfc.comcastbusiness.net] has joined #rubymotion
+[18:08] <joffreyjaffeux_> all we need now is colin
+[18:08] <joffreyjaffeux_> sounds like a sing
+[18:08] <@GantMan> lol
+[18:09] <Austin_Seraphin> Hey ColinTA. I see chat about video, do I have to open a page or something?
+[18:09] <sail> https://www.youtube.com/watch?v=Pel-0XS-mJc&feature=youtu.be
+[18:09] <sail> this link
+[18:09] == lrz_ has changed nick to lrz
+[18:09] == bensheldon [~bensheldo@50.0.141.157] has left #rubymotion []
+[18:09] == mode/#rubymotion [+o lrz] by ChanServ
+[18:09] <@colinta> lrz: can you set the topic to that link?
+[18:09] == ChanServ changed the topic of #rubymotion to: Online meetup! http://www.youtube.com/watch?v=Pel-0XS-mJc&feature=youtu.be
+[18:10] <@lrz> here you go master
+[18:10] <jballanc> deja vu?
+[18:10] <@GantMan> lol
+[18:10] <brianpWins> heh
+[18:10] <@colinta> yeah that was odd
+[18:10] <@colinta> everyone seems to be waiting on me again and again
+[18:10] <@GantMan> we'll be starting soon everyone,
+[18:10] <@GantMan> lol
+[18:10] <jballanc> announcing RubyMotion v2.0 - groundhog day edition
+[18:11] == bensheldon [~bensheldo@50.0.141.157] has joined #rubymotion
+[18:11] <BeautifulFunc> haha
+[18:11] == neshmi_ [~neshmi@cpe-76-88-33-168.san.res.rr.com] has joined #rubymotion
+[18:11] == willrax [~willrax@203.38.251.24] has joined #rubymotion
+[18:11] == henkem [~textual@rrcs-24-106-42-94.west.biz.rr.com] has joined #rubymotion
+[18:11] == cwd1 [~cwd1@cpe-76-176-151-243.san.res.rr.com] has joined #rubymotion
+[18:11] <wndxlori> oh, were we supposed to have drinks ready? dang.  brb
+[18:12] <jballanc> you know what would have made this all smoother? Google Glass
+[18:12] <@lrz> wndxlori: yes! beer is preferable!
+[18:12] <jballanc> trust me
+[18:12] <jballanc> I know these things
+[18:12] <@colinta> no one can see my beer!
+[18:12] <mattvv> what beer are you drinking?!
+[18:12] <ashish_> yeah mine too ! :)
+[18:13] == neshmi [~neshmi@cpe-76-88-33-168.san.res.rr.com] has quit [Ping timeout: 276 seconds]
+[18:13] <jballanc> time killer: tell us your favorite beer?
+[18:13] <jballanc> (hint: you're wrong)
+[18:13] == bhaarat [~bhaarat@ip68-98-164-120.dc.dc.cox.net] has joined #rubymotion
+[18:13] <ashish_> corono/ budwieser
+[18:13] == amazedkoumei_ [7e135ea7@gateway/web/freenode/ip.126.19.94.167] has joined #rubymotion
+[18:13] <mattvv> haha
+[18:14] == seanlilmateus [~Adium@xdsl-87-79-42-247.netcologne.de] has joined #rubymotion
+[18:14] <Austin_Seraphin> My favorite depends on my mood and the season.
+[18:14] == silasjmatson [~silasjmat@70-90-129-137-oregon.hfc.comcastbusiness.net] has left #rubymotion []
+[18:14] <ashish_> whats yours ? haha
+[18:14] <mattvv> you can just copy the hangout link at the top to colin
+[18:14] <mattvv> and he can join
+[18:14] <memph1s> so is it about beermotion now?
+[18:14] == danhealy_ [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has joined #rubymotion
+[18:14] == silasjmatson [~silasjmat@70-90-129-137-oregon.hfc.comcastbusiness.net] has joined #rubymotion
+[18:14] <cwd1> where is the hangout or is it better to use the youtube feed?
+[18:14] <mattsgarrison> http://youtu.be/Pel-0XS-mJc
+[18:14] <wndxlori> yay!
+[18:14] <jballanc> A challenger appears!
+[18:14] <@lrz> yeepee!
+[18:14] <mattsgarrison> BeerMotion sounds much better though
+[18:15] == bhaarat [~bhaarat@ip68-98-164-120.dc.dc.cox.net] has quit [Client Quit]
+[18:16] <iwarshak> can you intro yourself?
+[18:16] <iwarshak> (not sure who is talking, sorry)
+[18:16] == danheal__ [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has joined #rubymotion
+[18:17] == danhealy [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has quit [Ping timeout: 246 seconds]
+[18:17] == damln [~damln@41.141.20.150] has joined #rubymotion
+[18:18] <mattsgarrison> Hangout Broadcast Link: http://youtu.be/Pel-0XS-mJc
+[18:18] == markrickert [~textual@cpe-075-181-084-021.carolina.res.rr.com] has joined #rubymotion
+[18:18] == amazedko_ [~amazedkou@softbank126019094167.bbtec.net] has joined #rubymotion
+[18:18] <iwarshak> Question: What are the next things on the roadmap? Is the roadmap publicly available?
+[18:18] <jamonholmgren> QBasic FTW!
+[18:18] == dhf [~dhf@ip68-108-99-41.lv.lv.cox.net] has joined #rubymotion
+[18:18] == henkem [~textual@rrcs-24-106-42-94.west.biz.rr.com] has quit [Quit: Computer has gone to sleep.]
+[18:19] == rafacv [~rafacv@177.3.218.148] has joined #rubymotion
+[18:19] == danhealy_ [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has quit [Ping timeout: 246 seconds]
+[18:20] == rodchile [~rodchile@190.215.36.70] has quit [Quit: rodchile]
+[18:20] == amazedkoumei_ [7e135ea7@gateway/web/freenode/ip.126.19.94.167] has quit [Quit: Page closed]
+[18:21] == andrewa2 [~andrewa2@c-98-250-104-203.hsd1.mi.comcast.net] has joined #rubymotion
+[18:21] == baxang [0e340e2b@gateway/web/freenode/ip.14.52.14.43] has quit [Quit: Page closed]
+[18:22] == dr1 [~dr@24-148-66-18.c3-0.mart-ubr2.chi-mart.il.cable.rcn.com] has joined #rubymotion
+[18:22] == danhealy [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has joined #rubymotion
+[18:22] == wonkam [~textual@g231198155.adsl.alicedsl.de] has joined #rubymotion
+[18:23] <markrickert> it was indeed, spectacular.
+[18:23] <markrickert> got to have dinner with Clay Allsopp and a beer with Laurent!
+[18:24] == danheal__ [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has quit [Ping timeout: 252 seconds]
+[18:24] == wln [~wln@cpe-72-229-107-181.nyc.res.rr.com] has joined #rubymotion
+[18:24] <mattsgarrison> Please give me your questions for Colin or Laurent and I'll have Gant read them and answer them.
+[18:24] <Austin_Seraphin> Yes spectacular!
+[18:24] <markrickert> Proof! http://cl.ly/image/3g3H2B2J2X3l
+[18:24] <jamonholmgren> Question: Are there plans to synchronize Ruby 2.0 syntax with RM?
+[18:24] <iwarshak> mattsgarrison: Do you ever think RM will be a "first class citizen" in the iOS world?
+[18:25] <jamonholmgren> Question: Will RubyMotion modules ever be able to override built-in Objective-C methods, or is that an inherent limitation of the implementation?
+[18:25] <Markvilla> LOL markrickert
+[18:25] <jamonholmgren> Question: What does Apple think of RubyMotion?
+[18:25] <@lrz> markrickert: lol
+[18:25] <markrickert> X-Ray, also known as "the great open source naming debacle of 2013"
+[18:25] <cwd1> Question: Any plans to expand upon the debugger's ability to poke around evaluating Ruby expressions?
+[18:26] == GioMV [beeb0930@gateway/web/freenode/ip.190.235.9.48] has joined #rubymotion
+[18:26] == danhealy_ [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has joined #rubymotion
+[18:26] <markrickert> :D
+[18:26] <gmacc> boom
+[18:26] <memph1s> wow, video stopped
+[18:26] <jnoon> video down
+[18:26] <ashish_> ?
+[18:26] <BeautifulFunc> uh oh lost video
+[18:26] <Dan2552> :(
+[18:26] <jamonholmgren> Just prefix every RubyMotion library with "Motion" and we're namespaced.
+[18:26] <wndxlori> :-( lost video
+[18:26] <mattvv> lame video lost :(
+[18:27] <BeautifulFunc> back
+[18:27] <jnoon> video up
+[18:27] <wndxlori> oh, its back
+[18:27] <mattvv> yay
+[18:27] <iwarshak> mattsgarrison: question: any plans for more profiling tools?
+[18:28] == SimianLogic [180504ac@gateway/web/freenode/ip.24.5.4.172] has joined #rubymotion
+[18:28] == kastiglione [~user@S010600226b69fc45.cg.shawcable.net] has joined #rubymotion
+[18:29] <mattsgarrison> video good for everyone?
+[18:29] == danhealy [~danhealy@50-0-109-73.dsl.dynamic.sonic.net] has quit [Ping timeout: 240 seconds]
+[18:29] <BeautifulFunc> yeah it's back
+[18:29] <zef> it's back yes
+[18:29] <bensie> it's good now
+[18:29] <markrickert> we're back up
+[18:29] <mattvv> yeah its back
+[18:29] <cwd1> video back on.
+[18:29] <iwarshak> i can see
+[18:29] <kastiglione> yeah it's back
+[18:29] <jnoon> back
+[18:29] <wndxlori> back
+[18:29] <ashish_> got it back
+[18:29] <seanlilmateus> yeah it's back
+[18:29] <silasjmatson> back
+[18:29] == GioMV [beeb0930@gateway/web/freenode/ip.190.235.9.48] has quit [Client Quit]
+[18:29] <AndyStechishin> video and audio are good
+[18:29] <zef> I'm guessing we're on a decent delay
+[18:29] <jballanc> hah...video is a few seconds behind, it's fun :)
+[18:29] <doug316_> Somebody was doing laundry
+[18:29] <memph1s> okay okay!
+[18:30] <mattsgarrison> my desktop is in the laundry room / beer fridge room
+[18:30] <markrickert> wow… what kind of delay is the video on?
+[18:30] == dr1 [~dr@24-148-66-18.c3-0.mart-ubr2.chi-mart.il.cable.rcn.com] has left #rubymotion []
+[18:30] <Markvilla> Video is OK for me
+[18:30] <jballanc> typing automute is *the worst*
+[18:30] <Markvilla> audio too
+[18:30] <jballanc> hits me every time in work hangouts as well
+[18:30] <memph1s> let's assume this meet up is a part of Google I/O sessions :)
+[18:31] <andrewa2> okay we heard you say the word bananagram
+[18:31] <jballanc> ok we heard you say the word bananagram
+[18:31] <wndxlori> bananagram?
+[18:31] <mattvv> ok we heard you say the word bananagram
+[18:31] <jnoon> bananagram
+[18:31] <mattvv> haha
+[18:31] == joffreyjaffeux_ [4dce58e6@gateway/web/freenode/ip.77.206.88.230] has quit [Quit: Page closed]
+[18:31] <Dan2552> just heard bananagram
+[18:31] <silasjmatson> bananagram
+[18:31] <jballanc> hahaha
+[18:31] <seanlilmateus> bananagram
+[18:31] <ashish_> what was the word :)
+[18:31] <jballanc> question for colin: bananagram? really?
+[18:31] <Markvilla> banana!
+[18:31] == jmay [~jmay@75-37-195-29.lightspeed.lsatca.sbcglobal.net] has joined #rubymotion
+[18:31] <Markvilla> bananagram!
+[18:31] <mattsgarrison> delay is about a solid minute
+[18:32] <@lrz> i am answering the questions one after one, they will appear on the video
+[18:32] <kastiglione> I bet Colin's working on a ReactiveCocoa based library
+[18:32] == kpassapk [be73085a@gateway/web/freenode/ip.190.115.8.90] has joined #rubymotion
+[18:32] <jamonholmgren> Question: Have you benchmarked RubyMotion against Objective-C? Any difference?
+[18:32] <iwarshak> mattsgarrison: question/concern. with support for osx now, I am personally concerned that iOS will get less attention. is this a legit concern?
+[18:32] == RayHightower [~chatzilla@24-136-21-204.c3-0.mcm-ubr1.chi-mcm.il.cable.rcn.com] has joined #rubymotion
+[18:32] <Markvilla> you guys should just go on, we'll watch it delayed and/or watch the video afterwarda
+[18:32] <mattvv> wow huge delay
+[18:32] <mattvv> haha
+[18:32] <Markvilla> :)
+[18:32] <dhf> keeps failing and have to reload.
+[18:33] <kastiglione> haha, I didnt't actually expect him to talk about ReactiveCocoa
+[18:33] <mattsgarrison> my "cameraman" client crashed.  only stopped to make sure the broadcast was still ongoing
+[18:33] == Stuif [~jw@D97B4C20.cm-3-4b.dynamic.ziggo.nl] has joined #rubymotion
+[18:34] <Austin_Seraphin> I feel excited about osx. I hope people will make gems to make that easier, dsl's and the like. I think I read that teacup already works.
+[18:35] == Stuif [~jw@D97B4C20.cm-3-4b.dynamic.ziggo.nl] has quit [Client Quit]
+[18:35] <@colinta> yup! teacup works! :-)
+[18:36] == gmacc [~gmack@pool-100-1-126-177.nwrknj.fios.verizon.net] has quit [Quit: ☠]
+[18:36] <cwd1> 10:00 AM -- Perfect
+[18:36] == silasjmatson [~silasjmat@70-90-129-137-oregon.hfc.comcastbusiness.net] has quit [Remote host closed the connection]
+[18:36] <jamonholmgren> I'm in CA time, so sounds good (in Washington State)
+[18:36] <memph1s> it's 2AM in Belarus :(
+[18:36] <ashish_> 10 AM perfect !
+[18:36] <jballanc> 2 AM in Ankara too :)
+[18:36] <AndyStechishin> that is very late for Australasia
+[18:37] <bensie> 10am pacific is great
+[18:37] == nvick [~nvick@pfsense.newheights.org] has joined #rubymotion
+[18:37] == nvick [~nvick@pfsense.newheights.org] has quit [Client Quit]
+[18:37] == nvick [~nvick@pfsense.newheights.org] has joined #rubymotion
+[18:37] <cwd1> Code reloading = Win
+[18:37] <cwd1> Oops Code reloading == Win
+[18:37] <dhf> No mater what time is selected it will be bad for someone. The problem with today's is it falls on multiple days. confusing to many.
+[18:37] <jamonholmgren> Am I the only one who missed the first guy's introduction? Can he re-introduce himself? The guy next to Colin in the video.
+[18:38] == silasjmatson [~silasjmat@70-90-129-137-oregon.hfc.comcastbusiness.net] has joined #rubymotion
+[18:38] == dhf [~dhf@ip68-108-99-41.lv.lv.cox.net] has quit [Quit: dhf]
+[18:39] == neshmi [~neshmi@cpe-76-88-33-168.san.res.rr.com] has joined #rubymotion
+[18:39] <AndyStechishin> That is Gant, who organized the meetup
+[18:39] <jamonholmgren> Ah, thanks, hi Gant.
+[18:39] <mattsgarrison> reannouncing...
+[18:39] <matrixise> re
+[18:40] == damln [~damln@41.141.20.150] has quit [Remote host closed the connection]
+[18:41] <@lrz> i am keeping all questions/answers in a text file, will paste the link here later
+[18:41] <@lrz> sorry that i can't talk, baby/wife are sleeping next door :)
+[18:41] <jballanc> Colin's got a prettier face than the rest of us ugly devs
+[18:42] <neshmi> speak for yourself jballanc ;)
+[18:42] <@lrz> lol
+[18:42] <mattsgarrison> (we'll also collect that and post it on motionmeetup.com afterwards)
+[18:42] <ashish_> he looks like UIImage.imageNamed("JonnyDepp+RobertDowing")
+[18:43] <memph1s> it's okay if it's not Ryan Gosling
+[18:44] <markrickert> I'm not sure why Apple WOULDN'T embrace it… I think they should adopt it as the default language for iOS development :)
+[18:44] <cwd1> I feel so much better that the camera is on them and not me :)
+[18:44] <jamonholmgren> Laurent's nice personality sets the bar for all of us, and I mean that sincerely.
+[18:44] <mattsgarrison> hence my keynote page ;)
+[18:45] <jamonholmgren> It makes for a happier community and less drama
+[18:45] <markrickert> Matt's talk was awesome.
+[18:47] <markrickert> I've always tried writing Mac apps and given up. I have a feeling I'll be writing a shipping application now that RM2 supports Mac
+[18:47] <cwd1> Question: Are class variables stored in thread-local storage or are they available across entire apps?
+[18:49] <Austin_Seraphin> What version of Ruby does RubyMotion 2.0 base itself on, still 1.9.2? BTW a friend just gave me a Sierra Nevada Summerfest Ale.
+[18:50] == nvick [~nvick@pfsense.newheights.org] has quit [Quit: nvick]
+[18:50] == rod__ [~rod@c-71-195-194-216.hsd1.ut.comcast.net] has quit [Quit: rod__]
+[18:51] <marcisme> June 12 is during WWDC
+[18:51] == kastiglione [~user@S010600226b69fc45.cg.shawcable.net] has quit [Ping timeout: 252 seconds]
+[18:51] == andrewcarr [~andrewcar@findouran.plus.com] has joined #rubymotion
+[18:51] <mattsgarrison> just ended the video
+[18:51] <RayHightower> Suggestion: Just choose a time and make a recording available. And rotate the time so it's daytime for at least one meetup one day.
+[18:51] == natevick [~nvick@pfsense.newheights.org] has joined #rubymotion
+[18:52] <jballanc> \o/
+[18:52] <memph1s> thanks a lot guys
+[18:52] <wndxlori> thanks guys!  good job
+[18:52] <@lrz> it worked!
+[18:52] <neshmi> thanks guys, awesome!!
+[18:52] <@GantMan> whew!  
+[18:52] <mattsgarrison> videos will always be available from the google hangouts on air
+[18:52] <markrickert> sweet! thanks a lot
+[18:52] <natevick> Thanks, guys
+[18:52] <jamonholmgren> Very cool, thanks for putting it on guys!
+[18:52] <cwd1> Thanks!
+[18:52] == cwd1 [~cwd1@cpe-76-176-151-243.san.res.rr.com] has quit [Remote host closed the connection]
+[18:52] <Markvilla> Just finished
+[18:52] <@colinta> how the heck did kastiglione guess that i am working on a reactivecocoa thing!?
+[18:52] <@lrz> q&a for now: http://pastie.org/7913896
+[18:52] <seanlilmateus> thanks guys, was great \o/
+[18:52] <iwarshak> lrz colinta mattsgarrison GantMan thanks! really appreciated
+[18:52] <AndyStechishin> Thanks Matt and Gant, big thanks to Laurent and Colin
+[18:52] <RayHightower> Organizers: Thanks for doing this. Awesome idea!
+[18:52] <markrickert> and a special thanks to @lrz for staying up wayy late over there in Belgium!
+[18:52] <ashish_> thanks everyone
+[18:52] <@GantMan> :)
+[18:53] == Beto [~Beto@187-162-90-93.static.axtel.net] has quit [Quit: Beto]
+[18:53] == visoft [~dwhite@173-13-79-29-NewEngland.hfc.comcastbusiness.net] has left #rubymotion []
+[18:53] <@colinta> haha, i'm reading through the chat logs… this is fun :-)
+[18:53] <Dan2552> where's the best way to check for when these meetups happen? I joined after seeing the tweet
+[18:53] <Austin_Seraphin> Curry time, perfect. Thanks and see you all soon. I'll definitely use the IRC channel now. :)
+[18:53] == Austin_Seraphin [~Adium@173-12-5-73-Philadelphia.hfc.comcastbusiness.net] has quit [Quit: Leaving.]
+[18:53] <@lrz> thanks all for joining, i'm staying a little bit so feel free to ask more questions
+[18:53] <mattsgarrison> @Dan2552 motionmeetup.com
+[18:53] <Markvilla> I dont care much about the time, 1am is not too late for an owl like me :)
+[18:54] <Markvilla> but a bit earlier would be nice
+[18:54] <Dan2552> @mattsgarrison cheers
+[18:54] <jamonholmgren> http://www.rubymotion.com/ << bottom of the page is a newsletter signup -- I think that's how I learned about it
+[18:54] <@colinta> RayHightower: I agree about the time - i'd like to have it rotate around europe, asia, and us
+[18:54] <mattsgarrison> our times are flexible, and will be largely dependent on the guest we bring on
+[18:54] <@lrz> we should revive the newsletter
+[18:54] == muescha [2e7334d1@gateway/web/freenode/ip.46.115.52.209] has joined #rubymotion
+[18:54] <@colinta> and ashish_: that is going to crack up my wife.  it's a good thing the video quality is not good enough to show how uneven my beard is today :-)
+[18:55] <iwarshak> lrz: I'm glad for WeakRef, and I'd like to see the memory gc explained more in the docs.
+[18:55] <doug316_> lrz: When there's a crash with a call stack, i.e. "(0x4a58012 0x319ae7e 0x15128c4 0x709252 0x7058a5 0x1)", will that someday produce a useful backtrace?
+[18:55] <mattsgarrison> @colinta beard? what beard?
+[18:55] == Dan2552 [52199bc2@gateway/web/freenode/ip.82.25.155.194] has quit [Quit: Page closed]
+[18:55] == andrewa2 has changed nick to andrewsardone
+[18:55] <jamonholmgren> @doug316_ << this is what I want to know too
+[18:55] <Markvilla> a countdown till the next meetup on motionmeetup.com would be useful for the hour/day confusion
+[18:55] <@colinta> Dan2552: there's been a few announcements on the mailing list, and @RubyMotion will def tweet them
+[18:55] <@lrz> iwarshak: noted, we should improve the memory section in the runtime guide
+[18:55] <@colinta> mattsgarrison: hey, i'm trying as hard as i can, not all of us can grow a fancy pants beard like yours!!
+[18:56] <sail> doug316_: me too
+[18:56] <@lrz> doug316_: on the device, never, because symbolication is not allowed, but we have a plan to automatically symbolicate crash reports
+[18:56] <@colinta> k, and i'm finally caught up in the IRC log, and i'm pretty sure this is real time now
+[18:56] <wndxlori> @lrz: is there way that a time-limited version could be used for training/intro/trial stuff?  I hear a lot of people say they are interested, and then veer off at the cost, just to try things out.
+[18:56] <@lrz> doug316_: so, the app crashes and the report will be retrieved into your project directory. also, if you use the debugger, symbolication works there (because we have the dSYM available)
+[18:56] <jamonholmgren> I actually think the $200 cost keeps the riffraff out :)
+[18:57] <iwarshak> lrz: i'd be ok with paying even more for RM. especially if that got me something like priority support or something along those lines
+[18:57] <@GantMan> ^ agreed with Jamonholmgrn
+[18:57] <muescha> @Markvilla: yes because i expected it in 23h
+[18:57] <iwarshak> I think RM is underpriced
+[18:57] <jamonholmgren> I bought two licenses for my studio
+[18:57] <neshmi_> I'd rather see the $200 stay if it means a higher quality product for the rest of us
+[18:57] <jamonholmgren> underpricing problem solved
+[18:57] <@lrz> wndxlori: it has been asked quite a few times,  i don't know yet how i will organize that :/
+[18:57] <mattsgarrison> Markvilla: we plan on localizing the time on the site for the next one
+[18:57] * markrickert is riffraff, but that didn't stop him!
+[18:57] == bzalasky [~bzalasky@208.80.69.2] has quit [Remote host closed the connection]
+[18:57] <@lrz> iwarshak: enterprise (lol) support is planned!
+[18:57] == neshmi_ [~neshmi@cpe-76-88-33-168.san.res.rr.com] has quit [Remote host closed the connection]
+[18:57] <jamonholmgren> ha @markrickert
+[18:57] <doug316_> Priority support could be a self-supporting business arm
+[18:58] == neshmi_ [~neshmi@cpe-76-88-33-168.san.res.rr.com] has joined #rubymotion
+[18:58] == natevick [~nvick@pfsense.newheights.org] has left #rubymotion []
+[18:58] == neshmi_ [~neshmi@cpe-76-88-33-168.san.res.rr.com] has quit [Remote host closed the connection]
+[18:58] <@lrz> (the idea is to have 24h response time support, hot fixes, etc.)
+[18:58] <doug316_> Having an expert, even hourly, to help out with projects would be very helpful
+[18:58] == natevick [~nvick@pfsense.newheights.org] has joined #rubymotion
+[18:58] <jamonholmgren> So this IRC channel is pretty active?
+[18:59] <BeautifulFunc> Looking forward to more tutorials and screencasts in the new site for noobs like myself.
+[18:59] <iwarshak> lrz for those who are independent, and make their living using RM, 200 is a steal
+[18:59] <markrickert> I'd really like to get the rest of my team involved with RubyMotion… having an enterprise licensoe would be great… I could bay you lots of money and be able to install it on all my developer's machines.
+[18:59] <@colinta> jamonholmgren: it comes and goes :-)
+[18:59] <wndxlori> I have no problems with the price.  In fact, I'd probably pay more.  But the cost is an entry barrier that hurts adoption for newbs.
+[18:59] <@lrz> iwarshak: i agree, and yet, people complain it's too expensive (even the 99/y update :))
+[18:59] <markrickert> *bay = pay
+[18:59] <jamonholmgren> There's a student price, @wndxlori -- it's quite a bit less. Might help?
+[18:59] <ashish_> yeah there should be some kind of trial license or something of that sort , less feature :/
+[19:00] == memph1s [~memph1s@93.85.132.208] has quit [Quit: memph1s]
+[19:00] <jballanc> jamonholmgren: there's a handful of us that chill in this channel even when there's not much activity :)
+[19:00] <@lrz> yes, we have a 80% discount for students
+[19:00] <ashish_> featured**
+[19:00] <wndxlori> oh, that's not bad.  i was unaware of the student discount.
+[19:00] <zef> Also, just another idea you may have considered. Simulator only version for free, but pay to run it on the device — just like Apple.
+[19:00] <@lrz> jamonholmgren: i'm here every day (when i don't forget to start the client)
+[19:00] <jamonholmgren> @lrz you'll regret telling me that
+[19:00] <iwarshak> lrz: you mentioned code reloading, profileing, repl enhancements, etc. which do u think will be first
+[19:01] <@lrz> iwarshak: hard to tell, you will have the surprise :)
+[19:01] == wonkam [~textual@g231198155.adsl.alicedsl.de] has quit [Quit: Textual IRC Client: www.textualapp.com]
+[19:01] <markrickert> lol @jamonholmgren
+[19:01] <@lrz> but all of these are in the roadmap
+[19:01] == natevick [~nvick@pfsense.newheights.org] has quit [Client Quit]
+[19:01] <@lrz> i have a prototype of code reloading but it's very crashy
+[19:01] <sail> i like surprise
+[19:01] <ashish_> so @lrz is there some kind of schedule of RM new versions being released ? .. 2.0 took sometime
+[19:01] <sail> 2.0 already give surprise,please give me more..lol
+[19:02] <ashish_> but it was worth the wait
+[19:02] == wndxlori [~textual@184.71.41.230] has quit [Quit: Textual IRC Client: www.textualapp.com]
+[19:02] <@lrz> ashish_: we don't have a schedule but we try to do a release per month
+[19:02] <Markvilla> cached compiled gem code already gives a nice boost to compiling times, I think we can wait a bit for code reloading :P
+[19:02] == natevick [~nvick@pfsense.newheights.org] has joined #rubymotion
+[19:02] == natevick [~nvick@pfsense.newheights.org] has quit [Client Quit]
+[19:02] <@lrz> Markvilla: i forgot to mention that i also want to improve compiler time
+[19:03] <mattsgarrison> fyi, first recording was ~ 51minutes long
+[19:03] <jamonholmgren> I found a nice gem for continuous testing, "when-files-change" -- works great (runs rake spec every time a file changes)
+[19:03] <jamonholmgren> like Guard but no setup
+[19:03] <Markvilla> @lrz do you have any benchmarks of objc vs rm compiling times?
+[19:03] <ashish_> @lrz also is there something out there , such we can maintain multiple RM versions just like ruby on CI machines ?
+[19:03] <mattsgarrison> Recording can currently be rewatched here: http://www.youtube.com/watch?v=Pel-0XS-mJc
+[19:04] <@lrz> Markvilla: comparing compilation times, RM is way slower than objc... an order of magnitude slower
+[19:04] <mattsgarrison> i'll edit / trim the intro
+[19:04] <BeautifulFunc> lrz: any update on the rubymine and rubymotion 2.0 issue?
+[19:04] <@lrz> but i have never worked on getting it faster, so there are lots of low-hanging fruits to collect
+[19:04] <sail> BeautifulFunc: i think it's the problem of the jetbrains
+[19:04] <Markvilla> @lrz nice :)
+[19:04] == AndyStechishin [~textual@108.173.63.123] has quit [Quit: Textual IRC Client: www.textualapp.com]
+[19:05] <@colinta> BeautifulFunc: yeah, i was gonna start encouraging people to reach out to jetbrains
+[19:05] <doug316_> The rake tasks/motion-cocoapods might use some work, I still have to hack when I add or modify a pod
+[19:05] <@lrz> ashish_: right now there isn't, but you can archive your /Library/RubyMotion directories
+[19:05] <@lrz> everything is self-contained
+[19:05] == bhaarat [~bhaarat@ip68-98-164-120.dc.dc.cox.net] has joined #rubymotion
+[19:05] <@lrz> BeautifulFunc: yes, an update should ship this week on the jetbrains side
+[19:05] <doug316_> lrz: it would be nice if the entire distro was git so we could switch versions
+[19:05] <@lrz> in the meantime, downgrading to 1.35 works
+[19:06] <BeautifulFunc> lrz: great! Looking forward to that.
+[19:06] <@lrz> doug316_: hmm, i don't know if git works well with binary files, maybe...
+[19:06] == muescha [2e7334d1@gateway/web/freenode/ip.46.115.52.209] has quit [Ping timeout: 250 seconds]
+[19:06] <ashish_> some rvm or say RMvm !
+[19:06] <Markvilla> ashish_ it should be easy to write a script to download and archive all of them, "motion update --force-version=1.XX" @colinta correct me if im wrong
+[19:06] <jamonholmgren> The reason I asked about the module methods overriding Obj-C methods is it makes including ProMotion in your own ViewController kind of messy. Once we can override with module methods it'll be beautiful.
+[19:06] <@lrz> Markvilla: correct
+[19:07] <doug316_> Yes, rbenv support would work
+[19:07] <doug316_> It really could be treated like any ruby version
+[19:07] == neshmi [~neshmi@cpe-76-88-33-168.san.res.rr.com] has quit [Quit: neshmi]
+[19:07] <BeautifulFunc> colinta: yeah I did via twitter. lrz is the only one to respond. :)
+[19:07] <doug316_> Or a gem for that matter
+[19:07] <@GantMan> lrz: Will your RM site v2.0 have a place for templates to be featured/listed?
+[19:08] <Markvilla> doug316_ support could definitely be added, but it would be trickier since you cant tell 'motion' to download it to a custom path (afaik)
+[19:08] <@lrz> GantMan: project templates? yeah probably, we have a whole "developers" section
+[19:08] <jamonholmgren> Why doesn't Apple embrace RubyMotion? It makes iOS programming fun.
+[19:08] <@GantMan> excellent!
+[19:08] <@lrz> jamonholmgren: i tried, didn't work :)
+[19:08] <doug316_> Markvilla: exactly
+[19:09] == neshmi [~neshmi@cpe-76-88-33-168.san.res.rr.com] has joined #rubymotion
+[19:09] <ashish_> it must have not recognised the value of community yet !  once our apps start bringing money  they would :)
+[19:09] <jamonholmgren> @ashish_ nailed it
+[19:10] <ashish_> :)
+[19:10] <@lrz> yeah the community is awesome
+[19:10] <@lrz> i still don't believe sometimes :)
+[19:10] <@colinta> \o/ :-) ya'll rock
+[19:10] <@GantMan> lrz: I heard LivingSocial stopped using RubyMotion.  Can you speak to if this is true and why?
+[19:10] <@colinta> were they using ru
+[19:10] <@colinta> rubymotion?
+[19:10] <ashish_> because they went bankrupt last dec :/
+[19:10] <@lrz> GantMan: i have no idea, but the people i knew left the company
+[19:10] <@GantMan> I can't imagine anyone not wanting to use it over Obj-C
+[19:11] <Markvilla> @lrz do you see Xamarin as reference for where Rubymotion could be in some time?
+[19:11] <@lrz> Markvilla: as a reference i don't know, but the xamarin folks are remarkable (i'm a big fan of miguel :))
+[19:12] <@lrz> we might be working together on the test cloud stuff
+[19:12] <Markvilla> nice :D
+[19:12] <Markvilla> you mean the Travis integration and stuff?
+[19:12] <@GantMan> colinta: when you dev, do you use autolayout?
+[19:12] <@colinta> GantMan: yeah i really dig it
+[19:12] <@lrz> Markvilla: no, better! http://xamarin.com/test-cloud
+[19:13] <@colinta> it takes getting used to… you have to hate it for a while :-)
+[19:13] <jamonholmgren> I haven't been able to get past the hate stage for auto layout yet.
+[19:13] <@lrz> they acquired LessPainful, during the conference, one of the founders was there and gave a talk about calabash
+[19:13] <@colinta> i've heard only gripes a
+[19:13] <@colinta> about using it in xcode
+[19:13] <@GantMan> O!  Plans to fix Teacup constraints landscape property?
+[19:13] <@GantMan> I saw that bubbled up the other day
+[19:13] <@colinta> jamonholmgren: haha! hang in there!
+[19:13] == amazedko_ [~amazedkou@softbank126019094167.bbtec.net] has left #rubymotion ["Leaving..."]
+[19:14] <@GantMan> jamonholmgren: LOL,  don't blame you one bit
+[19:14] <Markvilla> @lrz oh yeah I remember the Calabash talk :) awesome!
+[19:15] <doug316_> Yes autolayout needs a DSL
+[19:15] <@colinta> GantMan: well that's tricky, because you have to remove the "portrait" orientations and then add the "landscape" orientations
+[19:15] <jamonholmgren> motion-layout does look okay, but the ASCII art thing...
+[19:15] == neshmi [~neshmi@cpe-76-88-33-168.san.res.rr.com] has quit []
+[19:15] <@lrz> the thing is, we could implement the ascii-art language in ruby code
+[19:15] <jamonholmgren> lrz: yes!
+[19:15] <@lrz> in ruby, | is a method, such as +
+[19:15] <@colinta> doug316_: jamonholmgren: if i have time, i'd like to incorporate ideas from teacup's constraint DSL into motion-layout
+[19:15] <@lrz> it's possible to hack something out
+[19:16] == Kay-Z [~CodeFriar@cpe-098-026-004-157.nc.res.rr.com] has joined #rubymotion
+[19:16] <@GantMan> sounds like wizard magic!  
+[19:16] == Kay-Z [~CodeFriar@cpe-098-026-004-157.nc.res.rr.com] has quit [Client Quit]
+[19:16] <doug316_> colinta: that would be great
+[19:16] <jamonholmgren> that would be great, @colinta
+[19:17] <@GantMan> colinta: very cool stuff.  Again thanks for the interview!
+[19:17] == RayHightower [~chatzilla@24-136-21-204.c3-0.mcm-ubr1.chi-mcm.il.cable.rcn.com] has quit [Remote host closed the connection]
+[19:17] <seanlilmateus> I've been working in improving motion layout, I hope soon to have a greaT pull request for qrush which will allow this >> https://github.com/qrush/motion-layout/issues/2#issuecomment-17838596
+[19:17] <@colinta> haha, well, i can't promise anything! i use teacup, and the constraints there work really well for me… but on the other hand i know it's a good idea to separate that part out
+[19:17] <@GantMan> I'm gonna try to help matt with the video stuff for a bit and get another beer :)
+[19:17] <@colinta> thanks GantMan!!
+[19:18] <@colinta> seanlilmateus: awesome!  that'll save me the effort! ;-)
+[19:18] <@lrz> GantMan: thanks man! i owe you one beer (and one more for every meetup) :)
+[19:18] <jamonholmgren> @colinta, would there be a way to use the Teacup styles without the layout portion? I'm not as fond of the layout part but like the styles.
+[19:18] <@colinta> oh yeah, for sure
+[19:18] <@colinta> jamonholmgren: just don't use a "constraints" key
+[19:19] <jamonholmgren> So the constraints key can only be used in a layout block?
+[19:19] <@colinta> ahh, no that's the motion-layout syntax
+[19:20] <@colinta> i'll find a teacup snippet
+[19:20] <@colinta> https://github.com/rubymotion/teacup#auto-layout
+[19:20] <jamonholmgren> Yeah, I should throw a quick gist of what I'd like to do up. Basically, use my ProMotion workflow but Teacup styles
+[19:20] == muescha [2e7334d1@gateway/web/freenode/ip.46.115.52.209] has joined #rubymotion
+[19:20] <@colinta> nice!
+[19:21] <muescha> help
+[19:21] <doug316_> I wonder if using HMTL/XML just like web would work for adaptive layouts
+[19:21] <seanlilmateus> colinta: I hope to work out this ideas soon, at the moment we need some feedback from the users
+[19:22] <Markvilla> muescha you came in the best moment to find someone to help you :P
+[19:22] <ivanacostarubio> :-)
+[19:22] <@GantMan> lol
+[19:22] <@colinta> doug316_: are you talking a
+[19:22] <@colinta> darn this keyboardk
+[19:23] <@colinta> everytime i go to press 'B' i press Enter instead
+[19:23] <@colinta> anyway
+[19:23] <doug316_> I am using Pixate for styling and I have to ask myself why I can't just design views in HTML
+[19:23] <Markvilla> doug316_ I dont think HTML syntax help, some of us write ios apps to run away from web hell :)
+[19:23] <doug316_> Pixate = CSS
+[19:23] <@colinta> doug316_: are you talking about a box-based thing?  i think UICollectionView would be a good thing to sit at the top
+[19:24] <jamonholmgren> Teacup + ProMotion: https://gist.github.com/jamonholmgren/5588519
+[19:24] <muescha> @Markvilla :-) smile i looked for irc help and forget the trailing slash ;-) i look for the command to show missed chats here from the last 10minutes
+[19:24] <@colinta> doug316_: what Markvilla said ;-) i wish you luck on that endeavor!
+[19:24] <markrickert> With all this talk about Teacup, i think we should note that there was a big ProMotion update today :) 0.6!
