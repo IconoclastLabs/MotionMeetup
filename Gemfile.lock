@@ -80,6 +80,7 @@ GEM
       bundler (~> 1.0)
       rails (>= 3, < 5)
     formatador (0.2.4)
+    friendly_id (4.0.9)
     guard (1.7.0)
       formatador (>= 0.2.4)
       listen (>= 0.6.0)
@@ -273,6 +274,7 @@ DEPENDENCIES
   dalli
   email_spec (>= 1.4.0)
   figaro (>= 0.6.3)
+  friendly_id
   guard
   guard-annotate
   guard-brakeman

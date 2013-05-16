@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.0.rc1'
 
 group :production do
   #heroku only has PostgreSQL
@@ -42,11 +42,11 @@ group :test, :development do
   gem 'rb-fchange', :require => false
 end
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'sass-rails',   '~> 4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.0.3'
+gem 'turbolinks'
+
 gem 'jquery-rails'
 gem 'madmimi'
 gem "haml-rails", ">= 0.4"
@@ -56,6 +56,6 @@ gem "email_spec", ">= 1.4.0", :group => :test
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "omniauth", ">= 1.1.3"
 gem "omniauth-github"
-gem "simple_form", ">= 2.1.0"
+#gem "simple_form", ">= 2.1.0"
 gem "figaro", ">= 0.6.3"
-
+gem 'friendly_id'

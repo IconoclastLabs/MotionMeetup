@@ -1,0 +1,25 @@
+%h1 Listing archives
+
+%table
+  %tr
+    %th Name
+    %th Title
+    %th Body
+    %th Publish at
+    %th
+    %th
+    %th
+
+  - @archives.each do |archive|
+    %tr
+      %td= archive.name
+      %td= archive.title
+      %td= archive.body
+      %td= archive.publish_at
+      %td= link_to 'Show', archive
+      %td= link_to 'Edit', edit_archive_path(archive)
+      %td= link_to 'Destroy', archive, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Archive', new_archive_path

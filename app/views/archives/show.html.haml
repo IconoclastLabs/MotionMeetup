@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @archive.name
+%p
+  %b Title:
+  = @archive.title
+%p
+  %b Body:
+  = @archive.body
+%p
+  %b Publish at:
+  = @archive.publish_at
+
+= link_to 'Edit', edit_archive_path(@archive)
+\|
+= link_to 'Back', archives_path
