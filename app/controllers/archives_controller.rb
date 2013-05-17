@@ -1,70 +1,51 @@
 class ArchivesController < ApplicationController
+  before_action :set_archive, only: [:show, :edit, :update, :destroy]
+
   # GET /archives
   # GET /archives.json
   def index
     @archives = Archive.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @archives }
-    end
   end
 
   # GET /archives/1
   # GET /archives/1.json
   def show
-    @archive = Archive.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @archive }
-    end
   end
 
   # GET /archives/new
-  # GET /archives/new.json
   def new
     @archive = Archive.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @archive }
-    end
   end
 
   # GET /archives/1/edit
   def edit
-    @archive = Archive.find(params[:id])
   end
 
   # POST /archives
   # POST /archives.json
   def create
+    @archive = Archive.new(archive_params)
     binding.pry
-    @archive = Archive.new(params[:archive])
-
     respond_to do |format|
       if @archive.save
         format.html { redirect_to @archive, notice: 'Archive was successfully created.' }
-        format.json { render json: @archive, status: :created, location: @archive }
+        format.json { render action: 'show', status: :created, location: @archive }
       else
-        format.html { render action: "new" }
+        format.html { render action: 'new' }
         format.json { render json: @archive.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PUT /archives/1
-  # PUT /archives/1.json
+  # PATCH/PUT /archives/1
+  # PATCH/PUT /archives/1.json
   def update
-    @archive = Archive.find(params[:id])
-
     respond_to do |format|
-      if @archive.update_attributes(params[:archive])
+      if @archive.update(archive_params)
         format.html { redirect_to @archive, notice: 'Archive was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: 'edit' }
         format.json { render json: @archive.errors, status: :unprocessable_entity }
       end
     end
@@ -73,12 +54,21 @@ class ArchivesController < ApplicationController
   # DELETE /archives/1
   # DELETE /archives/1.json
   def destroy
-    @archive = Archive.find(params[:id])
     @archive.destroy
-
     respond_to do |format|
       format.html { redirect_to archives_url }
       format.json { head :no_content }
     end
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_archive
+      @archive = Archive.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def archive_params
+      params.require(:archive).permit(:name, :title, :body, :publish_at)
+    end
 end

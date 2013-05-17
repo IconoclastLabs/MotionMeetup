@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+// require turbolinks
 //= require 'jquery.anchor'
 //= require 'jquery.flexslider-min'
 //= require 'jquery.prettyPhoto'

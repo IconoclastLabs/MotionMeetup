@@ -29,7 +29,6 @@ group :test, :development do
   gem 'brakeman'
   gem 'guard-brakeman'
   #gem 'guard-test'
-  gem "sextant" # adds route display info to /rails/routes
   gem "better_errors"
   gem "binding_of_caller"
   gem 'annotate'
