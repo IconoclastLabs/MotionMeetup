@@ -25,7 +25,7 @@ class ArchivesController < ApplicationController
   # POST /archives.json
   def create
     @archive = Archive.new(archive_params)
-    binding.pry
+    #binding.pry
     respond_to do |format|
       if @archive.save
         format.html { redirect_to @archive, notice: 'Archive was successfully created.' }

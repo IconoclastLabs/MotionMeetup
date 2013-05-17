@@ -7,8 +7,8 @@
 #  title      :string(255)
 #  body       :text
 #  publish_at :datetime
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  created_at :datetime
+#  updated_at :datetime
 #  slug       :string(255)
 #
 
