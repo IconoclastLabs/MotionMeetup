@@ -34,5 +34,5 @@ Motionmeetup::Application.configure do
 
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => 'example.com' }
-
+  config.eager_load = false
 end

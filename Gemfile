@@ -58,3 +58,6 @@ gem "omniauth-github"
 #gem "simple_form", ">= 2.1.0"
 gem "figaro", ">= 0.6.3"
 gem 'friendly_id', :git => 'git@github.com:FriendlyId/friendly_id.git', :branch => 'rails4'
+gem 'rails_admin', :git => 'git@github.com:sferik/rails_admin.git', :branch => 'rails-4'
+
+gem "devise", :git => 'git@github.com:plataformatec/devise.git', :branch => 'rails4'
