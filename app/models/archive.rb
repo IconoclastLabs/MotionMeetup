@@ -14,7 +14,7 @@
 
 class Archive < ActiveRecord::Base
   extend FriendlyId
-  
-  #attr_accessible :body, :name, :publish_at, :title
-  friendly_id name
+
+
+  friendly_id :name, :use => :slugged
 end

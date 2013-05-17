@@ -25,29 +25,20 @@ class ArchivesController < ApplicationController
   # POST /archives.json
   def create
     @archive = Archive.new(archive_params)
-    #binding.pry
-    respond_to do |format|
-      if @archive.save
-        format.html { redirect_to @archive, notice: 'Archive was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @archive }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @archive.errors, status: :unprocessable_entity }
-      end
+
+    if @archive.save
+      redirect_to @archive, notice: 'Archive was successfully created.'
+    else
+      render action: 'new'
     end
   end
 
   # PATCH/PUT /archives/1
-  # PATCH/PUT /archives/1.json
   def update
-    respond_to do |format|
-      if @archive.update(archive_params)
-        format.html { redirect_to @archive, notice: 'Archive was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @archive.errors, status: :unprocessable_entity }
-      end
+    if @archive.update(archive_params)
+      redirect_to @archive, notice: 'Archive was successfully updated.'
+    else
+      render action: 'edit'
     end
   end
 
@@ -55,10 +46,7 @@ class ArchivesController < ApplicationController
   # DELETE /archives/1.json
   def destroy
     @archive.destroy
-    respond_to do |format|
-      format.html { redirect_to archives_url }
-      format.json { head :no_content }
-    end
+    redirect_to archives_url
   end
 
   private
