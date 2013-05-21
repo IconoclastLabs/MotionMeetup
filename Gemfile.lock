@@ -258,6 +258,7 @@ GEM
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
+    redcarpet (2.2.2)
     remotipart (1.0.5)
     ruby2ruby (2.0.3)
       ruby_parser (~> 3.1)
@@ -356,10 +357,12 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
+  redcarpet
   ruby_gntp
   sass-rails (~> 4.0.0.rc1)
   sqlite3
   thin
+  tilt
   turbolinks
   turn
   uglifier (>= 1.0.3)

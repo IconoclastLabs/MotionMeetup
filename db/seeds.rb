@@ -8,4 +8,4 @@
 # Environment variables (ENV['...']) are set in the file config/application.yml.
 # See http://railsapps.github.com/rails-environment-variables.html
 
-admin = User.new(name:'Admin', email: 'test@example.com', password:'12345678')
+admin = User.create(name:'Admin', email: 'test@example.com', password:'12345678')

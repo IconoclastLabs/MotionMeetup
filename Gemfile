@@ -62,3 +62,6 @@ gem 'friendly_id', :git => 'git@github.com:FriendlyId/friendly_id.git', :branch 
 gem 'rails_admin', :git => 'git@github.com:sferik/rails_admin.git', :branch => 'rails-4'
 
 gem "devise", :git => 'git@github.com:plataformatec/devise.git', :branch => 'rails4'
+
+gem 'tilt' # used by haml to provide Markdown rendering
+gem 'redcarpet' #markdown processor
