@@ -14,10 +14,12 @@
 
 class Archive < ActiveRecord::Base
   extend FriendlyId
-
-
   friendly_id :name, :use => :slugged
-
+  has_attached_file :asset
+  attr_accessor :asset
+  # add a delete_<asset_name> method:
+  attr_accessor :delete_asset
+  before_validation { self.asset.clear if self.delete_asset == '1' }
 
   rails_admin do
 
@@ -26,7 +28,7 @@ class Archive < ActiveRecord::Base
     configure :body, :text
     configure :publish_at, :datetime
     configure :slug, :string
-
+    configure :asset, :paperclip
     # Cross-section configuration:
     object_label_method :name     # Name of the method called for pretty printing an *instance* of ModelName
     label 'Archive'              # Name of ModelName (smartly defaults to ActiveRecord's I18n API)
@@ -46,35 +48,35 @@ class Archive < ActiveRecord::Base
       # sort_by :id           # Sort column (default is primary key)
       # sort_reverse true     # Sort direction (default is true for primary key, last created first)
     end
-    edit do
-      group :default do
-        label "Required Fields"
-        help "'Name' is internally used for admins and for url page slug generation. Users will not explicitly see it. These fields are optional in the sense that the model will save anything. Name, Title and Body should be provided before publishing to users."
-
-        field :name do
-          label "Name"
-          group :default
-        end
-        field :title do
-          label "Title"
-          group :default
-        end
-        field :body do
-          label "Page Body (Markdown)"
-          group :default
-        end
-      end
-      group :optional do
-        label "Optional Fields"
-        active false
-        field :publish_at do
-          label "Publish at"
-        end
-        field :slug do
-          label "Custom Slug"
-        end
-      end
-    end
+    #edit do
+    #  group :default do
+    #    label "Required Fields"
+    #    help "'Name' is internally used for admins and for url page slug generation. Users will not explicitly see it. These fields are optional in the sense that the model will save anything. Name, Title and Body should be provided before publishing to users."
+    #
+    #    field :name do
+    #      label "Name"
+    #      group :default
+    #    end
+    #    field :title do
+    #      label "Title"
+    #      group :default
+    #    end
+    #    field :body do
+    #      label "Page Body (Markdown)"
+    #      group :default
+    #    end
+    #  end
+    #  group :optional do
+    #    label "Optional Fields"
+    #    active false
+    #    field :publish_at do
+    #      label "Publish at"
+    #    end
+    #    field :slug do
+    #      label "Custom Slug"
+    #    end
+    #  end
+    #end
   #     show do; end
   #     edit do; end
   #     export do; end
