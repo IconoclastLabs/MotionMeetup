@@ -1,4 +1,5 @@
 class ArchivesController < ApplicationController
+  layout 'archive'
   before_action :set_archive, only: [:show, :edit, :update, :destroy]
 
   # GET /archives

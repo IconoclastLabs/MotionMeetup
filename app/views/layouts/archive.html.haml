@@ -1,0 +1,44 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    / Title, Description and Keywords
+    %title= content_for?(:title) ? yield(:title) : "Motion Meetup"
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => content_for?(:description) ? yield(:description) : "Motion Meetup", :name => "description"}
+    %meta{:content => "", :name => "keywords"}/
+    %meta{:content => "", :name => "author"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Coda", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Oswald", :rel => "stylesheet", :type => "text/css"}/
+    / HTML5 Support for IE
+    -#/[if lt IE 9]
+      = javascript_include_tag "html5shim"
+    / Stylesheets
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = yield(:head)
+    -#/[if IE 7]
+      = stylesheet_link_tag "font-awesome-ie7"
+    / Favicon
+    = favicon_link_tag "favicon/favicon.png"
+  %body{:class => "#{controller_name} #{action_name}"}
+    %header
+      .container
+        .row
+          .span12
+            / Logo or Name section
+            .logo
+              = link_to image_tag("logo.png"), root_path
+              %p.lsub Monthly Online RubyMotion Meetup
+
+    #main{:role => "main"}
+      .container
+        .content
+          .row
+            .span12
+              = render 'layouts/messages'
+              = yield
+          %footer
+    = render 'layouts/google_analytics'
