@@ -38,10 +38,42 @@ class Archive < ActiveRecord::Base
     # Section specific configuration:
 
     list do
+      field :name do
+        label "Event"
+      end
       #filters [:id, :slug, :name, :publish_at]  # Array of field names which filters should be shown by default in the table header
       # items_per_page 100    # Override default_items_per_page
       # sort_by :id           # Sort column (default is primary key)
       # sort_reverse true     # Sort direction (default is true for primary key, last created first)
+    end
+    edit do
+      group :default do
+        label "Required Fields"
+        help "'Name' is internally used for admins and for url page slug generation. Users will not explicitly see it. These fields are optional in the sense that the model will save anything. Name, Title and Body should be provided before publishing to users."
+
+        field :name do
+          label "Name"
+          group :default
+        end
+        field :title do
+          label "Title"
+          group :default
+        end
+        field :body do
+          label "Page Body (Markdown)"
+          group :default
+        end
+      end
+      group :optional do
+        label "Optional Fields"
+        active false
+        field :publish_at do
+          label "Publish at"
+        end
+        field :slug do
+          label "Custom Slug"
+        end
+      end
     end
   #     show do; end
   #     edit do; end
