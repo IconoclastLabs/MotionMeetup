@@ -63,6 +63,7 @@ gem 'rails_admin', :git => 'git@github.com:sferik/rails_admin.git', :branch => '
 
 gem "devise", :git => 'git@github.com:plataformatec/devise.git', :branch => 'rails4'
 gem 'paperclip', :git => "git@github.com:thoughtbot/paperclip.git"#, :branch => 'rails-4'
+gem 'aws-sdk'
 gem 'tilt' # used by haml to provide Markdown rendering
 gem 'redcarpet' #markdown processor
 gem 'stamp'

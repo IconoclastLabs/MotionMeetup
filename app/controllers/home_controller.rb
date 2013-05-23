@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
   	@message = Message.new
+    @previous_meetup = Archive.published.first
+    @upcoming_meetups = Archive.unpublished.limit(5).all
   	check_for_signups
   end
 
@@ -20,7 +22,7 @@ private
 	      flash[:error] = "Please fill all fields correctly."
 	    end
 
-	end
+	  end
   end
 
 end

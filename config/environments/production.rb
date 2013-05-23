@@ -82,7 +82,22 @@ Motionmeetup::Application.configure do
 
   config.eager_load = true
 
-  PAPERCLIP_STORAGE_OPTIONS = {:storage => :s3,
-                               :s3_credentials => "#{Rails.root}/config/s3.yml",
-                               :path => "/:style/:filename"}
+  config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+          :bucket => ENV['AWS_BUCKET'],
+          :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+          :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      },
+      :path => "/:style/:filename"
+  }
+
+  #PAPERCLIP_STORAGE_OPTIONS = {
+  #    :storage => :s3,
+  #    :s3_credentials => {
+  #        :bucket => ENV['AWS_BUCKET'],
+  #        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+  #        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']},
+  #    :path => "/:style/:filename"
+  #    }
 end

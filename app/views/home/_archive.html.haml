@@ -15,4 +15,6 @@
         %a{:class => "prettyPhoto[pp_gal]", :href => "javascript:alert('NOT YET');"}
           = image_tag "archive_photos/week2.png"
       .span3.offset1
-        = link_to image_tag("archive_photos/week1.png"), archive_url(Archive.find(1)), {class: "prettyPhoto[pp_gal]"}
+        Asset:
+        = @previous_meetup.asset
+        = link_to image_tag("archive_photos/week1.png"), archive_url(@previous_meetup), {class: "prettyPhoto[pp_gal]"}

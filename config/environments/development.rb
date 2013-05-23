@@ -46,4 +46,9 @@ Motionmeetup::Application.configure do
   config.eager_load = false
 
   PAPERCLIP_STORAGE_OPTIONS = {:storage => :filesystem}
+  config.paperclip_defaults = {
+      :storage => :filesystem,
+      :path => "/var/app/attachments/:class/:id/:style/:basename.:extension"
+  }
+
 end
