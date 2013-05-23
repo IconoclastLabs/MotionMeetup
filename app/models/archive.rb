@@ -15,6 +15,9 @@
 class Archive < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
+
+  has_paper_trail
+
   has_attached_file :asset, {
       :styles => {:thumb => '50x50#', :original => '800x800>'}
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
