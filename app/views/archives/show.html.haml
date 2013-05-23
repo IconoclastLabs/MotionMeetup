@@ -4,7 +4,11 @@
   -# Hardcoding the image until I see about why Rails4 and Paperclip are not friends.
 
   %a.pull-left{href: '#', style: 'padding-right: 3%;'}
-    = image_tag "archive_photos/week1.png", class: 'media-object img-polaroid'
+    - begin
+      = @archive.asset.url
+    - rescue
+      = image_tag "archive_photos/week1.png", class: 'media-object img-polaroid'
+
   .media-body
     %h1.media-heading
       = @archive.title

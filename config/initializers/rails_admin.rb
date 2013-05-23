@@ -15,11 +15,11 @@ RailsAdmin.config do |config|
   config.current_user_method { current_user } # auto-generated
 
   # If you want to track changes on your models:
-  #config.audit_with :history, 'User'
+  config.audit_with :history, 'User'
   #config.audit_with :paper_trail, User
   # Or with a PaperTrail: (you need to install it first)
-  config.audit_with :paper_trail, User
-  config.audit_with :paper_trail, Archive
+  #config.audit_with :paper_trail, User
+  #config.audit_with :paper_trail, Archive
 
   # Display empty fields in show views:
   # config.compact_show_view = false

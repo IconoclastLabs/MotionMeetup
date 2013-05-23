@@ -16,7 +16,7 @@
           = image_tag "archive_photos/week2.png"
       .span3.offset1
         Asset:
-        = @previous_meetup.asset
+        -#= @previous_meetup.asset
         = link_to image_tag("archive_photos/week1.png"), archive_url(@previous_meetup), {class: "prettyPhoto[pp_gal]"}
     .row
       .span12

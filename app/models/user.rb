@@ -25,7 +25,6 @@
 #
 
 class User < ActiveRecord::Base
-  has_paper_trail
   # No new user signups allowed :P
   if Rails.env.production?
     devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable

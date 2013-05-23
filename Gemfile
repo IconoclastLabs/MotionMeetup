@@ -67,4 +67,4 @@ gem 'aws-sdk'
 gem 'tilt' # used by haml to provide Markdown rendering
 gem 'redcarpet' #markdown processor
 gem 'stamp'
-gem 'paper_trail', :git => 'git@github.com:airblade/paper_trail.git', :branch => 'rails4'
+#gem 'paper_trail', :git => 'git@github.com:airblade/paper_trail.git', :branch => 'rails4'
