@@ -15,11 +15,16 @@
 class Archive < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
-  has_attached_file :asset
+  has_attached_file :asset, {
+      :styles => {:thumb => '50x50#', :original => '800x800>'}
+  }.merge(PAPERCLIP_STORAGE_OPTIONS)
   attr_accessor :asset
   # add a delete_<asset_name> method:
-  attr_accessor :delete_asset
-  before_validation { self.asset.clear if self.delete_asset == '1' }
+  #attr_accessor :delete_asset
+  #before_validation { self.asset.clear if self.delete_asset == '1' }
+
+  scope :published, -> { where('publish_at <= ?', Time.now.to_date) }
+
 
   rails_admin do
 

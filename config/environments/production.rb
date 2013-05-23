@@ -82,4 +82,7 @@ Motionmeetup::Application.configure do
 
   config.eager_load = true
 
+  PAPERCLIP_STORAGE_OPTIONS = {:storage => :s3,
+                               :s3_credentials => "#{Rails.root}/config/s3.yml",
+                               :path => "/:style/:filename"}
 end

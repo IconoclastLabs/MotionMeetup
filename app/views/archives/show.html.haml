@@ -1,20 +1,18 @@
 %p#notice= notice
 
+.media
+  -# Hardcoding the image until I see about why Rails4 and Paperclip are not friends.
+
+  %a.pull-left{href: '#', style: 'padding-right: 3%;'}
+    = image_tag "archive_photos/week1.png", class: 'media-object img-polaroid'
+  .media-body
+    %h1.media-heading
+      = @archive.title
+
+    .media.archive_body
+      :markdown
+        #{@archive.body}
 %p
-  %b Name:
-  = @archive.name
-%p
-  %b Graphical Asset:
-  = @archive.asset
-%p
-  %b Title:
-  = @archive.title
-%p
-  %b Body:
-  .archive_body
-    :markdown
-      #{@archive.body}
-%p
-  %b Publish at:
-  = @archive.publish_at
+  %b Published on:
+  = @archive.publish_at.stamp('May 15th, 2013')
 

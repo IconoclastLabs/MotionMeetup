@@ -25,13 +25,14 @@
 #
 
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :name
+  # No new user signups allowed :P
+  if Rails.env.production?
+    devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
+  else
+    devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable
+  end
+
 
   def self.create_with_omniauth(auth)
     create! do |user|

@@ -1,6 +1,8 @@
 %h1
   Archives of Past Meetups
+%h3
+  %p
   - @archives.each do |archive|
-    %td= archive.publish_at
-    %td= link_to archive.title, archive
-
+    = archive.publish_at.stamp('2013-05-22')
+    = link_to archive.title, archive
+    %p

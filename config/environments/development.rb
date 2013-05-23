@@ -44,4 +44,6 @@ Motionmeetup::Application.configure do
   config.assets.debug = true
 
   config.eager_load = false
+
+  PAPERCLIP_STORAGE_OPTIONS = {:storage => :filesystem}
 end

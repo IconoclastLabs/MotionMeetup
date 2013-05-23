@@ -1,6 +1,6 @@
 class ArchivesController < ApplicationController
   layout 'archive'
-  before_action :set_archive, only: [:show, :edit, :update, :destroy]
+  before_action :set_archive, only: [:show]
 
   # GET /archives
   # GET /archives.json
@@ -13,42 +13,7 @@ class ArchivesController < ApplicationController
   def show
   end
 
-  # GET /archives/new
-  def new
-    @archive = Archive.new
-  end
 
-  # GET /archives/1/edit
-  def edit
-  end
-
-  # POST /archives
-  # POST /archives.json
-  def create
-    @archive = Archive.new(archive_params)
-
-    if @archive.save
-      redirect_to @archive, notice: 'Archive was successfully created.'
-    else
-      render action: 'new'
-    end
-  end
-
-  # PATCH/PUT /archives/1
-  def update
-    if @archive.update(archive_params)
-      redirect_to @archive, notice: 'Archive was successfully updated.'
-    else
-      render action: 'edit'
-    end
-  end
-
-  # DELETE /archives/1
-  # DELETE /archives/1.json
-  def destroy
-    @archive.destroy
-    redirect_to archives_url
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
