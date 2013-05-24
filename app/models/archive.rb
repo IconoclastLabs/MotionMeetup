@@ -2,28 +2,46 @@
 #
 # Table name: archives
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  title      :string(255)
-#  body       :text
-#  publish_at :datetime
-#  created_at :datetime
-#  updated_at :datetime
-#  slug       :string(255)
+#  id                  :integer          not null, primary key
+#  name                :string(255)
+#  title               :string(255)
+#  body                :text
+#  publish_at          :datetime
+#  created_at          :datetime
+#  updated_at          :datetime
+#  slug                :string(255)
+#  assets_file_name    :string(255)
+#  assets_content_type :string(255)
+#  assets_file_size    :integer
+#  assets_updated_at   :datetime
 #
 
 class Archive < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
 
-  has_attached_file :asset, {
-      :styles => {:thumb => '50x50#', :original => '800x800>'}
-  }.merge(PAPERCLIP_STORAGE_OPTIONS)
+  has_attached_file :asset, :styles => {:thumb => "120x120", :small => "240x240", :large => "640x480"},
+    :url => ":class/:attachment/:id/:style/:basename.:extension",
+    :path => ":class/:attachment/:id/:style/:basename.:extension"
+  #has_attached_file :asset,
+  #    :styles => {:thumb=> "100x100#", :small  => "150x150>", :medium => "250x250>", :large => "625x300>" },
+  #    :path => ":rails_root/public/uploads/:attachment/:id/:style_:basename.:extension",
+  #    :url => "/uploads/:attachment/:id/:style_:basename.:extension"
+  # has_attached_file :asset, {
+  #     :styles => {:thumb => '50x50#', :original => '800x800>'}
+  # }.merge(PAPERCLIP_STORAGE_OPTIONS)
   attr_accessor :asset
+  #attr_accessible :asset, :name, :title, :body, :publish_at, :slug
+
   # add a delete_<asset_name> method:
   #attr_accessor :delete_asset
   #before_validation { self.asset.clear if self.delete_asset == '1' }
+  after_save{binding.pry}
 
+  #def delete_asset
+  #  binding.pry
+  #  return 0
+  #end
   scope :published, -> { where('publish_at < ?', Time.now.to_date).order('publish_at DESC') }
   scope :unpublished, -> { where('publish_at >= ?', Time.now.to_date).order('publish_at DESC') }
 

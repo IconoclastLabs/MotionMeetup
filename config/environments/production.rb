@@ -82,22 +82,28 @@ Motionmeetup::Application.configure do
 
   config.eager_load = true
 
+  # config.paperclip_defaults = {
+  #     :storage => :s3,
+  #     :s3_credentials => {
+  #         :bucket => ENV['AWS_BUCKET'],
+  #         :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+  #         :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  #     },
+  #     :path => "/:style/:filename"
+  # }
+
   config.paperclip_defaults = {
-      :storage => :s3,
-      :s3_credentials => {
-          :bucket => ENV['AWS_BUCKET'],
-          :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-          :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-      },
-      :path => "/:style/:filename"
+    :storage => :fog,
+    :fog_credentials => {
+      :provider                 => 'AWS',
+      :aws_access_key_id        => ENV['AWS_ACCESS_KEY_ID'],
+      :aws_secret_access_key    => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+    :fog_directory => ENV['AWS_BUCKET'],
+    :fog_public => true,
+    :path => ":attachment/:id/:style/:basename-:fingerprint.:extension"
+    :default_url => ':attachment/:style/missing.gif',
+    #:fog_host => "localhost"
   }
 
-  #PAPERCLIP_STORAGE_OPTIONS = {
-  #    :storage => :s3,
-  #    :s3_credentials => {
-  #        :bucket => ENV['AWS_BUCKET'],
-  #        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-  #        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']},
-  #    :path => "/:style/:filename"
-  #    }
 end

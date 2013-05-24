@@ -45,10 +45,22 @@ Motionmeetup::Application.configure do
 
   config.eager_load = false
 
-  PAPERCLIP_STORAGE_OPTIONS = {:storage => :filesystem}
-  config.paperclip_defaults = {
-      :storage => :filesystem,
-      :path => "/var/app/attachments/:class/:id/:style/:basename.:extension"
-  }
+  # create a connection
+  # connection = Fog::Storage.new({
+  #   :provider                 => 'AWS',
+  #   :aws_access_key_id        => YOUR_AWS_ACCESS_KEY_ID,
+  #   :aws_secret_access_key    => YOUR_AWS_SECRET_ACCESS_KEY
+  # })
+
+  #config.paperclip_defaults = {:storage => :fog, :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/public"}, :fog_directory => "", :fog_host => "localhost"}
+
+  # config.paperclip_defaults = {
+  #   :storage => :filesystem,
+  #   :url  => "/uploads/:attachment/:id/:style/:basename-:fingerprint.:extension",
+  #   :path => Rails.root + "public/uploads/:attachment/:id/:style/:basename-:fingerprint.:extension" }
+
+
+
+  #:endpoint => Rails.root.join 'tmp'
 
 end
