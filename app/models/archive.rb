@@ -19,30 +19,18 @@
 class Archive < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
-  attr_accessor :asset, :asset_file_name, :assets_content_type, :assets_file_size, :assets_updated_at
+  attr_accessor :asset, :assets_file_name, :assets_content_type, :assets_file_size, :assets_updated_at
 
   has_attached_file :asset, :styles => {:thumb => "120x120", :small => "240x240", :large => "640x480"},
-    :url => ":class/:attachment/:id/:style/:basename.:extension",
-    :path => ":class/:attachment/:id/:style/:basename.:extension"
-  #has_attached_file :asset,
-  #    :styles => {:thumb=> "100x100#", :small  => "150x150>", :medium => "250x250>", :large => "625x300>" },
-  #    :path => ":rails_root/public/uploads/:attachment/:id/:style_:basename.:extension",
-  #    :url => "/uploads/:attachment/:id/:style_:basename.:extension"
-  # has_attached_file :asset, {
-  #     :styles => {:thumb => '50x50#', :original => '800x800>'}
-  # }.merge(PAPERCLIP_STORAGE_OPTIONS)
-
-  #attr_accessible :asset, :name, :title, :body, :publish_at, :slug
-
+    :url => '/uploads/:rails_env/:class/:attachment/:id/:style/:basename.:extension',
+    :path => ":rails_root/public/uploads/:rails_env/:class/:attachment/:id/:style/:basename.:extension"
   # add a delete_<asset_name> method:
-  #attr_accessor :delete_asset
-  #before_validation { self.asset.clear if self.delete_asset == '1' }
-  after_save{binding.pry}
-
-  #def delete_asset
-  #  binding.pry
-  #  return 0
-  #end
+  attr_accessor :delete_asset
+  before_validation { self.asset.clear if self.delete_asset == '1' }
+  after_commit { binding.pry }
+  def delete_asset
+    return 0
+  end
   scope :published, -> { where('publish_at < ?', Time.now.to_date).order('publish_at DESC') }
   scope :unpublished, -> { where('publish_at >= ?', Time.now.to_date).order('publish_at DESC') }
 
@@ -103,6 +91,9 @@ class Archive < ActiveRecord::Base
       end
     end
     show do
+      field :asset do
+        label "Graphical Asset"
+      end
       field :name do
         label "Name"
       end

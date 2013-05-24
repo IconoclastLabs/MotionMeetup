@@ -5,7 +5,7 @@
 
   %a.pull-left{href: '#', style: 'padding-right: 3%;'}
     - begin
-      = @archive.asset.url
+      = image_tag @archive.asset.url, class: 'media-object img-polaroid'
     - rescue
       = image_tag "archive_photos/week1.png", class: 'media-object img-polaroid'
 
@@ -17,6 +17,12 @@
       :markdown
         #{@archive.body}
 %p
-  %b Published on:
-  = @archive.publish_at.stamp('May 15th, 2013')
+  - if @archive.publish_at.nil?
+    %b This archive is unpublished.
+  - elsif @archive.publish_at > Time.zone.now
+    %b
+      = "This page's content will be updated after #{@archive.publish_at.stamp('May 15th, 2013')}"
+  - else
+    %b Published on:
+    = @archive.publish_at.stamp('May 15th, 2013')
 

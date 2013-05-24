@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 20130524161109) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.string   "assets_file_name"
-    t.string   "assets_content_type"
-    t.integer  "assets_file_size"
-    t.datetime "assets_updated_at"
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
   end
 
   add_index "archives", ["slug"], name: "index_archives_on_slug"
