@@ -19,6 +19,7 @@
 class Archive < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
+  attr_accessor :asset, :asset_file_name, :assets_content_type, :assets_file_size, :assets_updated_at
 
   has_attached_file :asset, :styles => {:thumb => "120x120", :small => "240x240", :large => "640x480"},
     :url => ":class/:attachment/:id/:style/:basename.:extension",
@@ -30,7 +31,7 @@ class Archive < ActiveRecord::Base
   # has_attached_file :asset, {
   #     :styles => {:thumb => '50x50#', :original => '800x800>'}
   # }.merge(PAPERCLIP_STORAGE_OPTIONS)
-  attr_accessor :asset
+
   #attr_accessible :asset, :name, :title, :body, :publish_at, :slug
 
   # add a delete_<asset_name> method:
