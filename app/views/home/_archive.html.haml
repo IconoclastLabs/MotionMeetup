@@ -4,21 +4,21 @@
   .portfolio
     .row
       .span6.offset1
-        Upcoming Meetups
+        Previous Meetups
       .span3.offset1
-        Previous Meetup
+        Upcoming Meetup
     .row
       .span3.offset1
-        %a{:class => "prettyPhoto[pp_gal]", :href => "javascript:alert('NOT YET');"}
-          = image_tag "archive_photos/week3.png"
+        - unless @previous_meetups.first.nil?
+          = link_to image_tag(@previous_meetups.first.asset.url(:small)), archive_url(@previous_meetups.first), {class: "prettyPhoto[pp_gal]"}
       .span3
-        %a{:class => "prettyPhoto[pp_gal]", :href => "javascript:alert('NOT YET');"}
-          = image_tag "archive_photos/week2.png"
+        .span3.offset1
+        - unless @previous_meetups.second.nil?
+          = link_to image_tag(@previous_meetups.second.asset.url(:small)), archive_url(@previous_meetups.second), {class: "prettyPhoto[pp_gal]"}
       .span3.offset1
-        - if !@previous_meetup.nil?
-          -#= @previous_meetup.asset.url
-          = link_to image_tag(@previous_meetup.asset), archive_url(@previous_meetup), {class: "prettyPhoto[pp_gal]"}
-        = link_to image_tag("archive_photos/week1.png"), archive_url(@previous_meetup), {class: "prettyPhoto[pp_gal]"}
+        - unless @upcoming_meetup.nil?
+          = link_to image_tag(@upcoming_meetup.asset.url(:small)), archive_url(@upcoming_meetup), {class: "prettyPhoto[pp_gal]"}
+
     .row
       .span12
         = link_to "Past Meetup Archives", archives_url
