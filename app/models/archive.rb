@@ -27,7 +27,7 @@ class Archive < ActiveRecord::Base
   # add a delete_<asset_name> method:
   attr_accessor :delete_asset
   before_validation { self.asset.clear if self.delete_asset == '1' }
-  after_commit { binding.pry }
+  #after_commit { binding.pry }
   def delete_asset
     return 0
   end
@@ -64,19 +64,23 @@ class Archive < ActiveRecord::Base
     edit do
       group :required  do
         label "Required Fields"
-        help "Name is internally used for admins and for url page slug generation. Users will not explicitly see it. These fields are optional in the sense that the model will save anything. Name, Title and Body should be provided before publishing to users."
 
         field :name do
           label "Name"
+          help "Name is internally used for admins and for url page slug generation. Users will not explicitly see it."
+
         end
         field :title do
           label "Title"
+          help "Archive Title shown in various headings."
         end
         field :asset do
            label "Graphical Asset"
+           help "Optional, but recommended."
         end
         field :body do
           label "Page Body (Markdown)"
+          help "HTML can be mixed into the markdown content."
         end
       end
       group :optional do
@@ -84,9 +88,11 @@ class Archive < ActiveRecord::Base
         active false
         field :publish_at do
           label "Publish at"
+          help "When 'Publish at' is not nil, the archive will be accessible to the public. Dates in the future will be considered scheduled meetups."
         end
         field :slug do
           label "Custom Slug"
+          help "This will be automatically generated from the Name field, but can be overridden as long as it's unique."
         end
       end
     end

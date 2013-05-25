@@ -5,7 +5,8 @@ class ArchivesController < ApplicationController
   # GET /archives
   # GET /archives.json
   def index
-    @archives = Archive.all
+    @archives = Archive.published
+    @future_meetups = Archive.unpublished
   end
 
   # GET /archives/1

@@ -1,28 +1,37 @@
 %p#notice= notice
 
-.media
-  -# Hardcoding the image until I see about why Rails4 and Paperclip are not friends.
+%ul.breadcrumb
+  %li
+    = link_to 'Archives', archives_path
+    %span.divider /
+  %li.active
+    = link_to @archive.name, archive_path(@archive)
 
-  %a.pull-left{href: '#', style: 'padding-right: 3%;'}
-    - begin
-      = image_tag @archive.asset.url, class: 'media-object img-polaroid'
-    - rescue
-      = image_tag "archive_photos/week1.png", class: 'media-object img-polaroid'
+.row
+  .span12.media
+    -# Hardcoding the image until I see about why Rails4 and Paperclip are not friends.
 
-  .media-body
-    %h1.media-heading
-      = @archive.title
+    %a.pull-left{href: '#', style: 'padding-right: 3%;'}
+      - begin
+        = image_tag @archive.asset.url(:small), class: 'media-object img-polaroid'
+      - rescue
+        = image_tag "archive_photos/default.png", class: 'media-object img-polaroid'
 
-    .media.archive_body
-      :markdown
-        #{@archive.body}
-%p
-  - if @archive.publish_at.nil?
-    %b This archive is unpublished.
-  - elsif @archive.publish_at > Time.zone.now
-    %b
-      = "This page's content will be updated after #{@archive.publish_at.stamp('May 15th, 2013')}"
-  - else
-    %b Published on:
-    = @archive.publish_at.stamp('May 15th, 2013')
+    .media-body
+      %h1.media-heading
+        = @archive.title
+.row
+  .span12.media.archive_body
+    :markdown
+      #{@archive.body}
+.row
+  .span4.offset4
+    - if @archive.publish_at.nil?
+      %b This archive is unpublished.
+    - elsif @archive.publish_at > Time.zone.now
+      %b
+        = "This page's content will be updated after #{@archive.publish_at.stamp('May 15th, 2013')}"
+    - else
+      %b Published on
+      = @archive.publish_at.stamp('May 15th, 2013')
 
