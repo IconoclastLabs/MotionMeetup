@@ -6,17 +6,6 @@ GIT
     friendly_id (4.1.0.beta.2)
 
 GIT
-  remote: git@github.com:plataformatec/devise.git
-  revision: 6b5988d756d780903bf8c9ccb3e2b3b724ccebe8
-  branch: rails4
-  specs:
-    devise (2.2.4)
-      bcrypt-ruby (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      warden (~> 1.2.1)
-
-GIT
   remote: git@github.com:sferik/rails_admin.git
   revision: a4b5646e35adbde705bba19a8e982ad82febfc3f
   branch: rails-4
@@ -118,6 +107,10 @@ GEM
     daemons (1.1.9)
     dalli (2.6.3)
     debug_inspector (0.0.2)
+    devise (1.5.4)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.1)
     email_spec (1.4.0)
       launchy (~> 2.1)
       mail (~> 2.2)
@@ -245,7 +238,7 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
-    orm_adapter (0.4.0)
+    orm_adapter (0.0.7)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -359,7 +352,7 @@ DEPENDENCIES
   brakeman
   coffee-rails (~> 4.0.0)
   dalli
-  devise!
+  devise
   email_spec (>= 1.4.0)
   figaro (>= 0.6.3)
   fog
