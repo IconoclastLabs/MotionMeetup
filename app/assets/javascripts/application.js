@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//  require jquery.turbolinks # https://github.com/kossnocorp/jquery.turbolinks
+//= require turbolinks
 //= require 'jquery.anchor'
 //= require 'jquery.flexslider-min'
 //= require 'jquery.prettyPhoto'

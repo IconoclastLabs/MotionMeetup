@@ -1,0 +1,20 @@
+.row
+  %h1.span12
+    Archives of Past Meetups
+.row
+  .span12
+    %h3
+      - @archives.each do |archive|
+        = archive.publish_at.stamp('2013-05-22')
+        = link_to archive.title, archive
+        %p
+.row
+  %h1.span12
+    Future Meetups
+.row
+  .span12
+    %h3
+      - @future_meetups.each do |meetup|
+        = meetup.publish_at.stamp('2013-05-22')
+        = link_to meetup.title, meetup
+        %p

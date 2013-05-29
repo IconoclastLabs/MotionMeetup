@@ -1,4 +1,5 @@
-#notification :ruby_gntp
+notification :off
+#interactor :simple
 
 group :ruby do
 

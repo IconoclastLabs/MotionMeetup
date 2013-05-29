@@ -80,9 +80,30 @@ Motionmeetup::Application.configure do
     password: ENV["GMAIL_PASSWORD"]
   }
 
+  config.eager_load = true
 
+  # config.paperclip_defaults = {
+  #     :storage => :s3,
+  #     :s3_credentials => {
+  #         :bucket => ENV['AWS_BUCKET'],
+  #         :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+  #         :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  #     },
+  #     :path => "/:style/:filename"
+  # }
 
-  # Log the query plan for queries taking more than this (works
-  # with SQLite, MySQL, and PostgreSQL)
-  # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  config.paperclip_defaults = {
+    :storage => :fog,
+    :fog_credentials => {
+      :provider                 => 'AWS',
+      :aws_access_key_id        => ENV['AWS_ACCESS_KEY_ID'],
+      :aws_secret_access_key    => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+    :fog_directory => ENV['AWS_BUCKET'],
+    :fog_public => true,
+    :path => ":attachment/:id/:style/:basename-:fingerprint.:extension"
+    :default_url => ':attachment/:style/missing.gif',
+    #:fog_host => "localhost"
+  }
+
 end

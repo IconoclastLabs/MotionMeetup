@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-gem 'rails', '3.2.13'
 
+gem 'rails', '4.0.0.rc1'
+#gem 'protected_attributes'
 group :production do
   #heroku only has PostgreSQL
   gem 'thin'
@@ -29,7 +30,6 @@ group :test, :development do
   gem 'brakeman'
   gem 'guard-brakeman'
   #gem 'guard-test'
-  gem "sextant" # adds route display info to /rails/routes
   gem "better_errors"
   gem "binding_of_caller"
   gem 'annotate'
@@ -42,11 +42,11 @@ group :test, :development do
   gem 'rb-fchange', :require => false
 end
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'sass-rails',   '~> 4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.0.3'
+gem 'turbolinks'
+
 gem 'jquery-rails'
 gem 'madmimi'
 gem "haml-rails", ">= 0.4"
@@ -56,6 +56,15 @@ gem "email_spec", ">= 1.4.0", :group => :test
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "omniauth", ">= 1.1.3"
 gem "omniauth-github"
-gem "simple_form", ">= 2.1.0"
+#gem "simple_form", ">= 2.1.0"
 gem "figaro", ">= 0.6.3"
+gem 'friendly_id', :git => 'git@github.com:FriendlyId/friendly_id.git', :branch => 'rails4'
+gem 'rails_admin', :git => 'git@github.com:sferik/rails_admin.git', :branch => 'rails-4'
 
+gem "devise", :git => 'git@github.com:plataformatec/devise.git', :branch => 'rails4'
+gem 'paperclip', :git => "git@github.com:thoughtbot/paperclip.git"#, :branch => 'rails-4'
+gem 'fog'
+gem 'tilt' # used by haml to provide Markdown rendering
+gem 'redcarpet' #markdown processor
+gem 'stamp'
+#gem 'paper_trail', :git => 'git@github.com:airblade/paper_trail.git', :branch => 'rails4'
