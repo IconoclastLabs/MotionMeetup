@@ -102,7 +102,7 @@ Motionmeetup::Application.configure do
     :fog_directory => ENV['AWS_BUCKET'],
     :fog_public => true,
     :path => ":attachment/:id/:style/:basename-:fingerprint.:extension"
-    :default_url => ':attachment/:style/missing.gif',
+    :default_url => ':attachment/:style/missing.gif'
     #:fog_host => "localhost"
   }
 
