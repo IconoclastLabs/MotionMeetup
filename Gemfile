@@ -58,11 +58,13 @@ gem "omniauth", ">= 1.1.3"
 gem "omniauth-github"
 #gem "simple_form", ">= 2.1.0"
 gem "figaro", ">= 0.6.3"
-gem 'friendly_id', :git => 'git@github.com:FriendlyId/friendly_id.git', :branch => 'rails4'
-gem 'rails_admin', :git => 'git@github.com:sferik/rails_admin.git', :branch => 'rails-4'
+#gem 'deep_merge', '1.0', :git => 'git://github.com/peritor/deep_merge.git'
 
-gem "devise", :git => 'git@github.com:plataformatec/devise.git', :branch => 'rails4'
-gem 'paperclip', :git => "git@github.com:thoughtbot/paperclip.git"#, :branch => 'rails-4'
+gem 'friendly_id', :git => 'git://github.com/FriendlyId/friendly_id.git', :branch => 'rails4'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch => 'rails-4'
+
+gem "devise", :git => 'git://github.com/plataformatec/devise.git', :branch => 'rails4'
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"#, :branch => 'rails-4'
 gem 'fog'
 gem 'tilt' # used by haml to provide Markdown rendering
 gem 'redcarpet' #markdown processor
