@@ -32,7 +32,7 @@ class Archive < ActiveRecord::Base
     return 0
   end
   scope :published, -> { where('publish_at < ?', Time.now.to_date).order('publish_at DESC') }
-  scope :unpublished, -> { where('publish_at >= ?', Time.now.to_date).order('publish_at DESC') }
+  scope :unpublished, -> { where('publish_at >= ?', Time.now.to_date).order('publish_at ASC') }
 
   rails_admin do
 
