@@ -5,17 +5,20 @@ gem 'rails', '4.0.0.rc1'
 #gem 'protected_attributes'
 group :production do
   #heroku only has PostgreSQL
-  gem 'thin'
-  gem "pg"
+
+  #gem "pg"
+
   gem 'dalli' #managed access to memcache on heroku
 end
 
+  gem 'sqlite3'
 group :test, :development do
   gem 'awesome_print'
   gem 'sqlite3'
   gem 'turn'
   gem 'minitest-spec-rails'
-  gem 'puma'
+  #gem 'puma'
+  gem 'thin'
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-doc'
