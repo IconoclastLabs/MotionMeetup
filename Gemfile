@@ -6,7 +6,8 @@ gem 'rails', '4.0.0.rc1'
 group :production do
   #heroku only has PostgreSQL
 
-  #gem "pg"
+  gem "pg"
+  gem 'thin'
 
   gem 'dalli' #managed access to memcache on heroku
 end
@@ -14,7 +15,7 @@ end
   gem 'sqlite3'
 group :test, :development do
   gem 'awesome_print'
-  gem 'sqlite3'
+  #gem 'sqlite3'
   gem 'turn'
   gem 'minitest-spec-rails'
   #gem 'puma'
@@ -49,6 +50,7 @@ gem 'sass-rails',   '~> 4.0.0.rc1'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.0.3'
 gem 'turbolinks'
+gem "sprockets-rails", :require => "sprockets/railtie"
 
 gem 'jquery-rails'
 gem 'madmimi'
