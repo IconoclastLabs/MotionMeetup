@@ -98,10 +98,10 @@ Motionmeetup::Application.configure do
       :provider                 => 'AWS',
       :aws_access_key_id        => ENV['AWS_ACCESS_KEY_ID'],
       :aws_secret_access_key    => ENV['AWS_SECRET_ACCESS_KEY']
-    }
+    },
     :fog_directory => ENV['AWS_BUCKET'],
     :fog_public => true,
-    :path => ":attachment/:id/:style/:basename-:fingerprint.:extension"
+    :path => ":attachment/:id/:style/:basename-:fingerprint.:extension",
     :default_url => ':attachment/:style/missing.gif'
     #:fog_host => "localhost"
   }
