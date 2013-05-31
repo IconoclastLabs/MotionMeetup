@@ -12,10 +12,9 @@ group :production do
   gem 'dalli' #managed access to memcache on heroku
 end
 
-  gem 'sqlite3'
 group :test, :development do
   gem 'awesome_print'
-  #gem 'sqlite3'
+  gem 'sqlite3'
   gem 'turn'
   gem 'minitest-spec-rails'
   #gem 'puma'
