@@ -17,6 +17,10 @@ h1,h2,h3,h4,h5,h6{
 	padding:10px;
 }
 
+.separate {
+	border-bottom: 1px dashed #fff;
+}
+
 a:active, a:focus { 
 	border:none;
 	outline:none;
@@ -29,6 +33,14 @@ a:-moz-any-link:focus {
 a, a:visited{
 	color:#ccc;
 	text-decoration:none;
+}
+
+.breadcrumb
+{
+	background-color: #F5F4E4;
+	a {
+		color: #333;
+	}
 }
 
 a:hover{
