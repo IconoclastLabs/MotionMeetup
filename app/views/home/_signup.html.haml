@@ -6,8 +6,8 @@
       .span6
         / About form
         %strong MotionMeetup Newsletter Signup:
-        %em 
-          Info you would care about.  
+        %em
+          Info you would care about.
         We're not interested in spamming you (unless we can use canned Spam).
         .form
           = form_for @message, :url => root_path, :html => { :id => 'signupSubmit', :class => 'form-horizontal'} do |form|
@@ -15,7 +15,7 @@
               =form.text_field :name, placeholder: "Your Name"
             .control-group
               =form.text_field :email, placeholder: "Your e-mail address"
-            .control-group  
+            .control-group
               =form.text_field :captcha, placeholder: "7 * 9 = ?"
             .form-actions
               =form.submit "Sign Up", class: "btn"
@@ -33,7 +33,7 @@
           .row
             .span3
               %address
-                %span.color.bold.company 
+                %span.color.bold.company
                   24/7 IRC channel #rubymotion
             .span2
               %address
