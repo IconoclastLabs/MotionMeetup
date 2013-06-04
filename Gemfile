@@ -30,6 +30,7 @@ group :test, :development do
   gem 'guard-annotate'
   gem "guard-puma"
   gem 'guard-bundler', "~> 1.0.0"
+  gem 'guard-migrate'
   gem 'brakeman'
   gem 'guard-brakeman'
   #gem 'guard-test'
