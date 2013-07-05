@@ -11,6 +11,7 @@ group :production do
   gem 'dalli' #managed access to memcache on heroku
   gem 'newrelic_rpm'
   gem 'rails_12factor'
+  gem 'heroku_rails_deflate'
 end
 
 group :test, :development do
