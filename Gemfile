@@ -10,6 +10,7 @@ group :production do
   gem "pg"
   gem 'dalli' #managed access to memcache on heroku
   gem 'newrelic_rpm'
+  gem 'rails_12factor'
 end
 
 group :test, :development do
