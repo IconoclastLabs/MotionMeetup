@@ -21,6 +21,18 @@ group :ruby do
     #watch( 'config/routes.rb' )
   end
 
+  guard 'brakeman', :run_on_start => true do
+    watch(%r{^app/.+\.(erb|haml|rhtml|rb)$})
+    watch(%r{^config/.+\.rb$})
+    watch(%r{^lib/.+\.rb$})
+    watch('Gemfile')
+  end
+
+  guard 'migrate' do
+    watch(%r{^db/migrate/(\d+).+\.rb})
+    #watch('db/seeds.rb')
+  end
+
   guard :minitest do
     # with Minitest::Unit
     watch(%r{^lib/(.+)\.rb$})     { |m| "test/#{m[1]}_test.rb" }
@@ -59,9 +71,3 @@ end
 
 
 
-guard 'brakeman', :run_on_start => true do
-  watch(%r{^app/.+\.(erb|haml|rhtml|rb)$})
-  watch(%r{^config/.+\.rb$})
-  watch(%r{^lib/.+\.rb$})
-  watch('Gemfile')
-end

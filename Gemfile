@@ -28,6 +28,7 @@ group :test, :development do
   gem 'guard-annotate'
   gem "guard-puma"
   gem 'guard-bundler', "~> 1.0.0"
+  gem 'guard-migrate'
   gem 'brakeman'
   gem 'guard-brakeman'
   #gem 'guard-test'
@@ -46,7 +47,8 @@ end
 gem 'sass-rails',   '~> 4.0.0.rc1'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.0.3'
-gem 'turbolinks'
+#gem 'turbolinks'
+gem "sprockets-rails", :require => "sprockets/railtie"
 
 gem 'jquery-rails'
 gem 'madmimi'

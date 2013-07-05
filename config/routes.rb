@@ -4,9 +4,7 @@ Motionmeetup::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :archives
-
-
+  post "/" => "home#signup"
   root :to => "home#index"
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
 end

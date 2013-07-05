@@ -1,6 +1,8 @@
 Motion Meetup
 ========================
 
+[![Code Climate](https://codeclimate.com/github/IconoclastLabs/MotionMeetup.png)](https://codeclimate.com/github/IconoclastLabs/MotionMeetup)
+
 ### Site Purpose ###
 Group meetup for RubyMotion Developers
 
