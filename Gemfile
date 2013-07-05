@@ -5,9 +5,10 @@ gem 'rails', '4.0.0.rc1'
 #gem 'protected_attributes'
 group :production do
   #heroku only has PostgreSQL
-  gem 'thin'
+  gem 'puma'
   gem "pg"
   gem 'dalli' #managed access to memcache on heroku
+  gem 'newrelic_rpm'
 end
 
 group :test, :development do
