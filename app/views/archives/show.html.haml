@@ -30,8 +30,8 @@
       %b This archive is unpublished.
     - elsif @archive.publish_at > Time.zone.now
       %b
-        = "This page's content will be updated after #{@archive.publish_at.stamp('May 15th, 2013')}"
+        = "This page's content will be updated after #{@archive.publish_at.format_like('May 15th, 2013')}"
     - else
       %b Published on
-      = @archive.publish_at.stamp('May 15th, 2013')
+      = @archive.publish_at.format_like('May 15th, 2013')
 
