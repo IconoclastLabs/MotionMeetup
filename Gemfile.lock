@@ -233,6 +233,20 @@ GEM
     mime-types (1.23)
     mini_portile (0.5.1)
     minitest (4.7.5)
+    minitest-capybara (0.4.1)
+      capybara (~> 2.0)
+      minitest (~> 4.0)
+      rake
+    minitest-metadata (0.4.0)
+      minitest (~> 4.7)
+    minitest-rails (0.9.2)
+      minitest (~> 4.7)
+      rails (>= 3.0)
+    minitest-rails-capybara (0.10.0)
+      capybara (~> 2.0)
+      minitest-capybara (~> 0.4)
+      minitest-metadata (~> 0.4)
+      minitest-rails (~> 0.9.1)
     minitest-spec-rails (4.7.4)
       minitest (~> 4.7)
       rails (<= 4.0)
@@ -396,6 +410,7 @@ DEPENDENCIES
   interactive_editor
   jquery-rails
   madmimi
+  minitest-rails-capybara
   minitest-spec-rails
   newrelic_rpm
   omniauth (>= 1.1.3)
