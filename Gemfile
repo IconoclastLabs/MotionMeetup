@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby "1.9.3", :engine => "rbx", :engine_version => "2.0.0.rc1"
 
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0'
 #gem 'protected_attributes'
 group :production do
   #heroku only has PostgreSQL
@@ -19,6 +19,11 @@ group :test, :development do
   gem 'sqlite3'
   gem 'turn'
   gem 'minitest-spec-rails'
+  gem 'capybara'
+  gem 'capybara_minitest_spec' # for capybara integration and spec matchers
+  gem 'capybara-webkit' # for headless javascript tests
+  gem 'turn' # for prettier test output
+  
   gem 'puma'
   gem 'pry'
   gem 'pry-rails'
@@ -47,7 +52,7 @@ group :test, :development do
   gem 'rb-fchange', :require => false
 end
 
-gem 'sass-rails',   '~> 4.0.0.rc1'
+gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.0.3'
 #gem 'turbolinks'
@@ -67,9 +72,9 @@ gem "figaro", ">= 0.6.3"
 #gem 'deep_merge', '1.0', :git => 'git://github.com/peritor/deep_merge.git'
 
 gem 'friendly_id', :git => 'git://github.com/FriendlyId/friendly_id.git'#, :branch => 'rails4'
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch => 'rails-4'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' #, :branch => 'rails-4'
 
-gem "devise", :git => 'git://github.com/plataformatec/devise.git', :branch => 'rails4'
+gem "devise", :git => 'git://github.com/plataformatec/devise.git' #, :branch => 'rails4'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"#, :branch => 'rails-4'
 gem 'fog'
 gem 'tilt' # used by haml to provide Markdown rendering
