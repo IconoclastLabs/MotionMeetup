@@ -12,8 +12,6 @@ feature "Home Index" do
     assert page.has_content? "MotionMeetup Newsletter Signup"
     assert page.find(:css, 'a#content-y') # sign up
     assert page.has_selector?('#content-y')
-    # TODO: this tests nothing useful yet
-    assert false
   end
 
 end
