@@ -24,7 +24,7 @@ group :test, :development do
   gem 'poltergeist' # for headless javascript tests
   gem 'minitest-rails-capybara'
   gem 'turn' # for prettier test output
-  
+
   gem 'puma'
   gem 'pry'
   gem 'pry-rails'
