@@ -21,10 +21,10 @@ group :test, :development do
   gem 'minitest-spec-rails'
   gem 'capybara'
   gem 'capybara_minitest_spec' # for capybara integration and spec matchers
-  gem 'capybara-webkit' # for headless javascript tests
+  gem 'poltergeist' # for headless javascript tests
   gem 'minitest-rails-capybara'
   gem 'turn' # for prettier test output
-  
+
   gem 'puma'
   gem 'pry'
   gem 'pry-rails'
