@@ -22,7 +22,7 @@ class Event < ActiveRecord::Base
     event.klass = "PUBLIC"
     event.created = self.created_at
     event.last_modified = self.updated_at
-    event.uid = event.url = "http://motionmeetup.com/events/#{self.id}"
+    event.uid = event.url = "http://motionmeetup.com/archives/#{self.id}"
     event.add_comment("Brought to you by http://www.iconoclastlabs.com/")
 
     event.alarm do
