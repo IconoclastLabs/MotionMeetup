@@ -7,4 +7,5 @@ Motionmeetup::Application.routes.draw do
   post "/" => "home#signup"
   root :to => "home#index"
 
+  get '/event/:id(.:format)' => "event#show"
 end
