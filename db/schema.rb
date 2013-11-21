@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20131121175414) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "plpgsql" if supports_extensions?
 
   create_table "archives", force: true do |t|
     t.string   "name"

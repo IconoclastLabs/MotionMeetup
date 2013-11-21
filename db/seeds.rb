@@ -11,7 +11,7 @@
 #1
 Event.create(
   happening: DateTime.parse('2013-05-15T17:30:00+00:00'),
-  description: "",
+  description: "Colin is the author of several RubyMotion gems, including Sugarcube and SweetTea, syntactical sugar for RubyMotion.  Clay is also the Community Manager for RubyMotion.",
   guest: "Colin T.A. Gray",
   guest_url: "https://twitter.com/colinta"
 )
@@ -19,7 +19,7 @@ Event.create(
 #2
 Event.create(
   happening: DateTime.parse('2013-06-17T17:30:00+00:00'),
-  description: "",
+  description: "Laurent is the creator RubyMotion and owner at HipByte.",
   guest: "Laurent Sansonetti",
   guest_url: "http://www.rubymotion.com/"
 )
@@ -27,7 +27,7 @@ Event.create(
 #3
 Event.create(
   happening: DateTime.parse('2013-07-17T17:30:00+00:00'),
-  description: "",
+  description: "Clay is an active maintainer of the widely used Bubblewrap gem for RubyMotion and is part of Propeller, a startup using RubyMotion.",
   guest: "Clay Allsopp",
   guest_url: "http://clayallsopp.com/"
 )
@@ -35,7 +35,7 @@ Event.create(
 #4
 Event.create(
   happening: DateTime.parse('2013-08-14T17:30:00+00:00'),
-  description: "",
+  description: "Nick is the author of the motion-layout gem, and recently shipped 37signals' new Basecamp app using RubyMotion.",
   guest: "Nick Quaranto",
   guest_url: "http://quaran.to/"
 )
@@ -43,7 +43,7 @@ Event.create(
 #5
 Event.create(
   happening: DateTime.parse('2013-09-18T17:30:00+00:00'),
-  description: "",
+  description: "Jamon is the creator of ProMotion, which has a fresh take on the iOS MVC pattern.",
   guest: "Jamon Holmgren",
   guest_url: "http://www.clearsightstudio.com/"
 )
@@ -51,7 +51,7 @@ Event.create(
 #6
 Event.create(
   happening: DateTime.parse('2013-10-16T17:30:00+00:00'),
-  description: "",
+  description: "Juan Karam is the creator of Joybox, a RubyMotion game library based on Cocos2D.",
   guest: "Juan Karam",
   guest_url: "http://joybox.io/"
 )
