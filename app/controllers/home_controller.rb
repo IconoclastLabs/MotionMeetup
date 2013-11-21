@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   	@message = Message.new
     @previous_meetups = Archive.published.limit(2).all
     @upcoming_meetup = Archive.unpublished.first
+    @events = Event.upcoming
   end
 
   def signup

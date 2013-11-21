@@ -6,34 +6,26 @@
   .border
   / Content
   .resume
-    .row
-      .span3
-        %h3 November 2013
+    - @events.each do |event|
+      .row
+        .span3
+          %h3
+            = event.month_year
+          .calendar
+            %a{href: "/event/#{event.id}.ics"} iCal Download
 
-      .span8
-        .rcontent
-          %h4 MotionMeetup # 7
-          %p
-            Dennis is the RubyMine project lead developer at JetBrains, which has tightly integrated with RubyMotion.
-          %p
-            Special Guest
-            %span.skill
-              %a{href: "http://jetbrains.com"} Dennis Ushakov     
-    .border
-    .row
-      .span3
-        %h3 December 2013
-
-      .span8
-        .rcontent
-          %h4 MotionMeetup # 8
-          %p
-            Mark Rickert is the heart of Mohawk Apps, a passionate RubyMotion developer and Core contributor to many gems (including ProMotion).
-          %p
-            Special Guest
-            %span.skill
-              %a{href: "http://www.mohawkapps.com/"} Mark Rickert                               
-    .border
+        .span8
+          .rcontent
+            %h4
+              = event.title
+            %p
+              = event.description
+            %p
+              Special Guest
+              %span.skill
+                %a{href: "#{event.guest_url}"}
+                  = event.guest
+      .border
     .row
       .span3
         %h3 To Be Announced
