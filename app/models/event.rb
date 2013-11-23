@@ -1,5 +1,4 @@
 class Event < ActiveRecord::Base
-  require "icalendar/tzinfo"
 
   def self.upcoming
     where("happening > ?", Time.now).order(happening: :asc)
