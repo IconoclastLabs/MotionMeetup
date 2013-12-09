@@ -2,6 +2,7 @@ Motion Meetup
 ========================
 
 [![Code Climate](https://codeclimate.com/github/IconoclastLabs/MotionMeetup.png)](https://codeclimate.com/github/IconoclastLabs/MotionMeetup)
+[![Crusher.io Optimization Badge](http://crusher.io/repo/iconoclastlabs/motionmeetup/badge)](http://crusher.io/repo/iconoclastlabs/motionmeetup)
 
 ### Site Purpose ###
 Group meetup for RubyMotion Developers
