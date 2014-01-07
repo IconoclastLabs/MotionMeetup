@@ -10,6 +10,7 @@ class HomeController < ApplicationController
     @previous_meetups = Archive.published.limit(2).all
     @upcoming_meetup = Archive.unpublished.first
     @message = Message.new(archive_params)
+    @events = Event.upcoming
     if @message.valid?
       mimi = MadMimi.new(ENV["MIMI_USERNAME"], ENV["MIMI_API"])
       mimi.add_to_list(@message.email,'MotionMeetup')
