@@ -1,30 +1,26 @@
 .content-y.content-d
-  %h2 Sign Up to get Notifications of Meetups
+  %h2 Sign Up to get Notifications
   .border
   .contact
     .row
       .span6
         / About form
-        %strong MotionMeetup Newsletter Signup:
-        %em
-          Info you would care about.
-        We're not interested in spamming you (unless we can use canned Spam).
-        .form
-          = form_for @message, :url => root_path, :html => { :id => 'signupSubmit', :class => 'form-horizontal'} do |form|
-            .control-group
-              =form.text_field :name, placeholder: "Your Name"
-            .control-group
-              =form.text_field :email, placeholder: "Your e-mail address"
-            .control-group
-              =form.text_field :captcha, placeholder: "7 * 9 = ?"
-            .form-actions
-              =form.submit "Sign Up", class: "btn"
+        %p
+          %strong Meetups are announced via RubyMotion Dispatch!
+          We're not interested in spamming you (unless we can use canned Spam).  We've teamed up with Infinite Red to make sure every meetup is announced in the RubyMotion Dispatch newsletters.
+        %h3
+          %a{href: "http://rubymotiondispatch.com/"}
+            Click Here to Sign Up
+        %p
+          Announcements are also made on the RubyMotion Google Plus Account
+          %a{href: "https://plus.google.com/+RubyMotion42/posts"}
+            Found Here
       .span5
         %h3 How it Works
         / normally where a map would go
         %p
           = image_tag "rubymotion_group.png", style: "float: right;"
-          Signing up will keep you updated with events on the Meetups.  Like who will be talking, dates, times, and archive updates.
+          Signing up will get you meetup times as well as general RubyMotion updates each week.
         %p
           On the day of the meetup, chat will be handled via the RubyMotion IRC Channel, and video will be provided via Google Hangout.
         .border
